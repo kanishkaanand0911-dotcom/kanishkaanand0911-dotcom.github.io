@@ -135,6 +135,33 @@
         svg.appendChild(rect);
       }
     }
+    annotate();
+  }
+  function el(name, attrs, text) {
+    var n = document.createElementNS(NS, name);
+    Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); });
+    if (text) n.textContent = text;
+    return n;
+  }
+  function outline(p) {
+    svg.appendChild(el("rect", { x: p.x * C - 1, y: p.y * C - 1, width: C + 1, height: C + 1, fill: "none", stroke: "#F8F7F4", "stroke-width": 1.6 }));
+  }
+  function label(x, y, text, anchor) {
+    svg.appendChild(el("text", {
+      x: x, y: y, "text-anchor": anchor || "start", fill: "#F8F7F4", stroke: "#171717", "stroke-width": 3,
+      "paint-order": "stroke", "font-family": "Space Grotesk, sans-serif", "font-size": 10.5, "font-weight": 600
+    }, text));
+  }
+  function annotate() {
+    counters.forEach(function (c, i) { outline(c); label(c.x * C + C + 5, c.y * C + 9, "Counter " + "AB"[i]); });
+    outline(entry); label(entry.x * C + C / 2, H * C + 12, "Entry", "middle");
+    outline(exit); label(exit.x * C - 5, exit.y * C - 4, "Exit", "end");
+    var defs = el("defs", {});
+    var g = el("linearGradient", { id: "crowdLegend", x1: "0", x2: "1", y1: "0", y2: "0" });
+    stops.forEach(function (s, i) { g.appendChild(el("stop", { offset: i / (stops.length - 1), "stop-color": s })); });
+    defs.appendChild(g); svg.appendChild(defs);
+    svg.appendChild(el("rect", { x: 0, y: 190, width: 110, height: 7, rx: 1.5, fill: "url(#crowdLegend)", stroke: "#555", "stroke-width": .5 }));
+    svg.appendChild(el("text", { x: 118, y: 197, fill: "#cfcdc6", "font-family": "Inter, sans-serif", "font-size": 9.5 }, "less to more time spent in each cell"));
   }
   if (svg) {
     draw(simulate(11));
