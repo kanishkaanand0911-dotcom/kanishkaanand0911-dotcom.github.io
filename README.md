@@ -9,8 +9,9 @@ Plain HTML, CSS and JavaScript. No framework, no build step, no template.
 
 - **Hero**: split layout with an abstract histogram-and-bell-curve portrait and a small terminal that types out on load.
 - **About**: short bio beside a four-circle diagram (Data, AI, Business, Creativity).
+- **When I'm not building**: an editorial list of interests (dance, reading, basketball, surfing, food) with small hand-drawn SVG glyphs.
 - **Experience**: Adani Green PVC / Mundra Petrochem case study with an interactive report-page illustration.
-- **Projects**: Vybe Learn (live), plus Crowd Movement Simulation (a small agent-based simulation you can re-run in the browser), Driver Drowsiness Detection and Global Superstore analysis.
+- **Projects**: Vybe Learn (live; began as a hackathon project and is being grown on AWS), plus Crowd Movement Simulation (a small agent-based simulation you can re-run in the browser), Driver Drowsiness Detection and Global Superstore analysis.
 - **Toolkit, Education, Leadership, Contact.**
 
 The dashboard, eye-landmark and histogram graphics are original illustrations drawn for this site.

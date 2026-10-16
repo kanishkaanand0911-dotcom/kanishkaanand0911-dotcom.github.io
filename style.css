@@ -24,7 +24,9 @@ h3{font-size:1.2rem;font-weight:600}
 p{margin:0 0 var(--s2)}
 ul,ol,dl,dd,figure{margin:0;padding:0}
 li{list-style:none}
-a{color:var(--cobalt-deep);text-underline-offset:3px}
+::selection{background:var(--lavender);color:var(--ink)}
+a{color:var(--cobalt-deep);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
 a:hover{color:var(--ink)}
 :focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:2px}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--s3)}
@@ -56,7 +58,7 @@ a:hover{color:var(--ink)}
 .tags li{font:500 .8rem var(--display);padding:3px 10px;border:1px solid var(--line);border-radius:3px;background:rgba(255,255,255,.55)}
 
 /* ---------- Hero ---------- */
-.hero{padding:var(--s5) 0 var(--s6)}
+.hero{padding:var(--s5) 0 var(--s5)}
 .hero__grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:var(--s5);align-items:center}
 .hero h1{font-size:clamp(2.6rem,5.4vw,4.25rem);font-weight:700;line-height:1.02;letter-spacing:-.03em;margin-bottom:var(--s3)}
 .hero__lead{font:500 clamp(1.2rem,2vw,1.5rem)/1.35 var(--display);max-width:26ch;margin-bottom:var(--s2)}
@@ -67,14 +69,14 @@ a:hover{color:var(--ink)}
 .now dt{font:600 .85rem var(--display);color:var(--muted)}
 .now dd{margin:0}
 
-.hero__art{position:relative;aspect-ratio:1/1.16;max-width:540px;width:100%;margin-left:auto}
-.portrait{position:absolute;left:4%;top:0;width:58%;height:72%;background:var(--lavender);border-radius:999px 999px 6px 6px;overflow:hidden}
+.hero__art{position:relative;aspect-ratio:1/1.24;max-width:540px;width:100%;margin-left:auto}
+.portrait{position:absolute;left:4%;top:0;width:58%;height:68%;background:var(--lavender);border-radius:999px 999px 6px 6px;overflow:hidden}
 .portrait svg{width:100%;height:100%}
 .terminal{position:absolute;right:0;bottom:1%;width:66%;background:var(--ink);color:var(--ivory);border-radius:var(--r);box-shadow:8px 8px 0 var(--cobalt);overflow:hidden}
 .terminal__bar{display:flex;align-items:center;gap:6px;padding:10px 12px;border-bottom:1px solid #333;font:500 .72rem var(--mono);color:#a9a9a9}
 .terminal__bar i{width:9px;height:9px;border-radius:50%;background:#444}
 .terminal__bar span{margin-left:8px}
-.terminal__body{padding:12px 14px 14px;font:400 .78rem/1.65 var(--mono);min-height:11.5rem}
+.terminal__body{padding:12px 14px 14px;font:400 .78rem/1.65 var(--mono);min-height:14rem}
 .terminal__body p{margin:0}
 .t-prompt{color:var(--lavender)}
 .t-out{color:#e8e6df}
@@ -94,6 +96,31 @@ a:hover{color:var(--ink)}
 .about__copy h2{margin-bottom:var(--s3)}
 .venn svg{width:100%;max-width:400px;margin:0 auto}
 .venn figcaption{font-size:.9rem;color:var(--muted);text-align:center;margin-top:var(--s2)}
+
+/* ---------- Off duty ---------- */
+.offduty{background:#F6EAEA;background:color-mix(in srgb,var(--blush) 42%,var(--ivory));border-top:1px solid var(--line)}
+.offduty h2{margin-bottom:var(--s4)}
+.interests{border-bottom:1px solid var(--line)}
+.interest{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr) 64px;align-items:center;gap:var(--s4);padding:var(--s3) var(--s2);border-top:1px solid var(--line);transition:background .2s}
+.interest:hover{background:rgba(255,255,255,.6)}
+.interest h3{font-size:clamp(1.9rem,4vw,3.1rem);font-weight:700;letter-spacing:-.03em;line-height:1}
+.interest p{margin:0;color:var(--muted)}
+.interest--lead p{color:var(--ink)}
+.chip{display:inline-block;margin-left:var(--s1);font:600 .78rem var(--display);padding:3px 10px;background:var(--cobalt);color:#fff;border-radius:3px;vertical-align:2px;white-space:nowrap}
+.glyph{width:64px;height:64px;justify-self:end;overflow:visible}
+.glyph *{transform-box:fill-box;transform-origin:center}
+@keyframes hop{0%,100%{transform:translateY(0)}35%{transform:translateY(-12px)}65%{transform:translateY(0)}80%{transform:translateY(-4px)}}
+@keyframes swing{0%,100%{transform:rotate(0)}25%{transform:rotate(-7deg)}75%{transform:rotate(7deg)}}
+@keyframes drift{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+@keyframes rise{0%{transform:translateY(0);opacity:1}100%{transform:translateY(-5px);opacity:.35}}
+.interest:hover .glyph--ball circle,.interest:hover .glyph--ball g{animation:hop .7s ease-out}
+.interest:hover .glyph--bells circle{animation:swing .5s ease-in-out 2}
+.interest:hover .glyph--wave path{animation:drift .9s ease-in-out}
+.interest:hover .glyph--book path{animation:drift .6s ease-in-out}
+.interest:hover .glyph--bowl .steam{animation:rise .8s ease-out}
+
+.origin{border-left:3px solid var(--cobalt);padding:4px 0 4px var(--s2);margin:var(--s2) 0;font-size:.98rem}
+.origin strong{font-family:var(--display)}
 
 /* ---------- Adani case study ---------- */
 .case{background:var(--ink);color:var(--ivory)}
@@ -176,7 +203,8 @@ a:hover{color:var(--ink)}
 .toolkit{border-top:1px solid var(--line)}
 .toolkit__grid,.edu__grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:var(--s5);align-items:start}
 .toolkit h2,.education h2{max-width:14ch;position:sticky;top:96px}
-.rows div{display:grid;grid-template-columns:11rem 1fr;gap:var(--s3);padding:var(--s2) 0;border-top:1px solid var(--line)}
+.rows div{display:grid;grid-template-columns:11rem 1fr;gap:var(--s3);padding:var(--s2) var(--s1);border-top:1px solid var(--line);transition:background .2s}
+.rows div:hover{background:rgba(67,97,238,.07)}
 .rows div:last-child{border-bottom:1px solid var(--line)}
 .rows dt{font:600 .9rem var(--display);color:var(--cobalt-deep)}
 .rows dd{margin:0}
@@ -261,8 +289,11 @@ a:hover{color:var(--ink)}
   .terminal__body{font-size:.7rem;min-height:10rem}
   .tag--b{right:4%;top:30%}
   .tag--d{left:2%;bottom:-5%}
-  .hero__art{aspect-ratio:1/1.22;margin-bottom:var(--s3)}
-  .portrait{height:62%}
+  .hero__art{aspect-ratio:1/1.36;margin-bottom:var(--s3)}
+  .portrait{height:56%}
+  .interest{grid-template-columns:minmax(0,1fr) 56px;gap:var(--s1) var(--s2);padding:var(--s3) 0}
+  .interest p{grid-column:1 / -1;grid-row:2}
+  .glyph{width:52px;height:52px;grid-column:2;grid-row:1}
   .terminal__body{min-height:9.5rem}
 }
 @media (prefers-reduced-motion:reduce){
