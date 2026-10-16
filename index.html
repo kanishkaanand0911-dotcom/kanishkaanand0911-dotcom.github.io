@@ -3,188 +3,445 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kanishka Anand — Data Science Portfolio</title>
-<meta name="description" content="Kanishka Anand is an MBA Tech (Data Science) student at NMIMS building with Python, Power BI and AI. Projects, internship and experience.">
-<meta property="og:title" content="Kanishka Anand — Data Science Portfolio">
-<meta property="og:description" content="Data science student building with Python, Power BI and AI. Founder of Vybe Learn.">
+<title>Kanishka Anand | Data Science × AI × Building</title>
+<meta name="description" content="Kanishka Anand is an MBA Tech (Data Science) student at NMIMS who turns data into decisions and ideas into working products. Projects, internship and contact.">
+<meta name="theme-color" content="#F8F7F4">
+<meta property="og:title" content="Kanishka Anand | Data Science × AI × Building">
+<meta property="og:description" content="Data Science student. AI builder. Curious problem-solver. Creator of Vybe Learn.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232b3a67'/%3E%3Ctext x='32' y='43' font-size='32' text-anchor='middle' fill='%23f6f1e7' font-family='Georgia,serif' font-weight='700'%3EKA%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%234361EE'/%3E%3Cpath d='M20 14v36M20 34l22-20M26 30l18 20' stroke='%23F8F7F4' stroke-width='6' fill='none'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<header class="nav" id="top">
-  <a class="brand" href="#top" aria-label="Kanishka Anand, home">KA<span>.</span></a>
-  <nav aria-label="Primary">
-    <a href="#projects">Projects</a>
-    <a href="#internship">Internship</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <button class="theme" id="theme" aria-label="Toggle dark mode" title="Toggle theme">◐</button>
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top" aria-label="Kanishka Anand, back to top"><span class="nav__mark" aria-hidden="true"></span>Kanishka Anand</a>
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#toolkit">Toolkit</a>
+      <a href="#education">Education</a>
+      <a href="#beyond">Beyond</a>
+      <a href="#contact" class="nav__cta">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<main>
-  <section class="hero">
-    <p class="eyebrow">Data Science · MBA Tech, NMIMS</p>
-    <h1>I turn messy data into<br><em>decisions people can act on.</em></h1>
-    <p class="lead">I'm Kanishka Anand, a data science student who builds dashboards, simulations, computer-vision tools and AI products. Currently building <a href="https://vybelearn.vercel.app" target="_blank" rel="noopener">Vybe Learn</a>, an AI tutor for data science.</p>
-    <div class="cta">
-      <a class="btn primary" href="#projects">See my work</a>
-      <a class="btn" href="https://www.linkedin.com/in/kanishka-anand09" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a class="btn" href="mailto:kanishkaanand0911@gmail.com">Email me</a>
-    </div>
-    <ul class="stats" aria-label="Highlights">
-      <li><b>Top 20</b><span>GDG Build &amp; Grow AI Hackathon, 250+ participants</span></li>
-      <li><b>3</b><span>Power BI dashboards shipped in industry</span></li>
-      <li><b>8.25</b><span>GPA on a 10-point scale at NMIMS</span></li>
-    </ul>
-  </section>
+<main id="main">
 
-  <section id="projects" class="reveal">
-    <div class="sec-head"><h2>Projects</h2><p>What I've built, newest first.</p></div>
-
-    <article class="feature">
-      <div class="tag">Currently building · Sep 2026 – Present</div>
-      <h3>Vybe Learn: Personalized Data Science Tutor</h3>
-      <p>An AI-powered learning platform with a multi-agent tutor and an adaptive curriculum. The MVP is live and I'm now collecting user feedback to guide wider distribution.</p>
-      <ul class="chips"><li>Multi-agent AI</li><li>Adaptive curriculum</li><li>LLM integration</li><li>Vercel</li></ul>
-      <a class="btn primary" href="https://vybelearn.vercel.app" target="_blank" rel="noopener">Try Vybe Learn ↗</a>
-    </article>
-
-    <div class="grid">
-      <article class="card">
-        <h3>Statistical Analysis of Global Superstore Data</h3>
-        <p class="stack">Python · Pandas · NumPy · SciPy · Seaborn · Matplotlib</p>
-        <ul>
-          <li>Applied Normal, Binomial and Poisson distributions to analyse sales, profit and orders.</li>
-          <li>Estimated distribution parameters with maximum likelihood, using log-likelihood and SciPy optimisation.</li>
-          <li>Ran EDA and modelling covering PDF/CDF/PPF and Z-score normalisation, visualised in Seaborn and Matplotlib.</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Crowd Movement Simulation</h3>
-        <p class="stack">Markov Chains · Stochastic Modelling · Agent-Based Simulation · Python</p>
-        <ul>
-          <li>Simulated crowd chaos in a college canteen to predict congestion, queues and flow.</li>
-          <li>Built 4 live agent-based simulations mapping density, counter hotspots, exit load and entry–exit imbalance across peak hours.</li>
-          <li>Turned the results into data-backed ways to cut wait times and spread the crowd.</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Driver Drowsiness Detection System</h3>
-        <p class="stack">Python · OpenCV · Dlib · NumPy · Matplotlib</p>
-        <ul>
-          <li>Real-time detection of eye closure using the Eye Aspect Ratio (EAR) to trigger alerts.</li>
-          <li>68-point facial landmarks with a 20-frame consecutive threshold to tell blinks from drowsiness.</li>
-          <li>Live annotations and EAR time-series graphs for session-wise alertness analysis.</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <section id="internship" class="reveal">
-    <div class="sec-head"><h2>Internship</h2><p>Business intelligence, automation and low-code at an industrial group.</p></div>
-
-    <div class="intern-top">
-      <div>
-        <h3>Business Intelligence &amp; Automation Intern</h3>
-        <p class="org">Mundra Petrochem Limited (Adani Group) · Microsoft Power Platform</p>
-        <p>Mundra Petrochem is building India's first coal-based PVC manufacturing facility: a 1 MMTPA, ₹26,401 crore project at Mundra, Gujarat. I worked on the digital side, building dashboards, automations and an app foundation to improve visibility and cut manual work. I was mentored by Tarang Bhargava, Tejas Jani, Kush Chokhawala and Jenil Patel.</p>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow">DATA SCIENCE × AI × BUILDING</p>
+      <h1>Hey, I'm Kanishka.</h1>
+      <p class="hero__lead">I turn data into decisions and ambitious ideas into working products.</p>
+      <p class="hero__intro">Data Science student. AI builder. Curious problem-solver.</p>
+      <div class="actions">
+        <a class="btn btn--primary" href="#projects">Explore Projects</a>
+        <a class="btn" href="#contact">Let's Connect</a>
       </div>
-      <ul class="chips vert"><li>Power BI</li><li>Power Automate</li><li>Power Apps</li><li>Dataverse</li><li>SQL Server</li><li>SharePoint</li><li>Advanced Excel</li></ul>
+      <dl class="now">
+        <div><dt>Building</dt><dd><a href="https://vybelearn.vercel.app/" target="_blank" rel="noopener">Vybe Learn</a>, an AI tutor for data science</dd></div>
+        <div><dt>Interned at</dt><dd><a href="#experience">Adani Green PVC / Mundra Petrochem</a>, Data &amp; Analytics</dd></div>
+        <div><dt>Studying</dt><dd>MBA Tech (Data Science), NMIMS Mumbai</dd></div>
+      </dl>
     </div>
 
-    <div class="grid three">
-      <article class="card">
-        <span class="kicker">Power BI</span>
-        <h3>Environment Monitoring Dashboard</h3>
-        <p>Sustainability analytics from raw operational data. Cleaned with Power Query and modelled for location-, month- and year-wise views, with KPI cards, trends and compliance monitoring.</p>
-      </article>
-      <article class="card">
-        <span class="kicker">Power BI</span>
-        <h3>IT Budget Dashboard</h3>
-        <p>One reporting layer for budgets, procurement and finance. Tracks allocation, utilisation, balances, PR commitments and variance, with drill-through by year, CapEx/OpEx and IT function, plus mapped vs unmapped PR views.</p>
-      </article>
-      <article class="card">
-        <span class="kicker">Power BI</span>
+    <div class="hero__art" aria-hidden="false">
+      <!-- To use a real photo: replace the <svg> inside .portrait with <img src="assets/portrait.jpg" alt="Kanishka Anand"> -->
+      <div class="portrait" role="img" aria-label="Abstract illustration: a histogram with a fitted bell curve inside an arch">
+        <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMax slice" focusable="false">
+          <circle cx="215" cy="92" r="34" fill="#F3D6DA"/>
+          <g fill="#4361EE">
+            <rect x="26"  y="318" width="26" height="32"/>
+            <rect x="56"  y="296" width="26" height="54"/>
+            <rect x="86"  y="262" width="26" height="88"/>
+            <rect x="116" y="226" width="26" height="124"/>
+            <rect x="146" y="214" width="26" height="136"/>
+            <rect x="176" y="240" width="26" height="110"/>
+            <rect x="206" y="276" width="26" height="74"/>
+            <rect x="236" y="308" width="26" height="42"/>
+          </g>
+          <path d="M14 350 C70 346 96 250 159 196 C222 250 248 346 288 350" fill="none" stroke="#171717" stroke-width="2.5"/>
+          <line x1="159" y1="150" x2="159" y2="350" stroke="#171717" stroke-width="1.5" stroke-dasharray="4 5"/>
+          <line x1="10" y1="350" x2="290" y2="350" stroke="#171717" stroke-width="2"/>
+        </svg>
+      </div>
+
+      <div class="terminal" id="terminal">
+        <div class="terminal__bar"><i></i><i></i><i></i><span>kanishka@nmims ~</span></div>
+        <div class="terminal__body" id="terminalBody">
+          <p class="t-line"><span class="t-prompt">$</span> whoami</p>
+          <p class="t-line t-out">data science student, nmims</p>
+          <p class="t-line"><span class="t-prompt">$</span> now --building</p>
+          <p class="t-line t-out">vybe-learn  <span class="t-dim"># ai tutor for data science</span></p>
+          <p class="t-line"><span class="t-prompt">$</span> experience --latest</p>
+          <p class="t-line t-out">data &amp; analytics intern, adani</p>
+          <p class="t-line"><span class="t-prompt">$</span> <span class="t-caret"></span></p>
+        </div>
+      </div>
+
+      <span class="tag tag--a">Python</span>
+      <span class="tag tag--b">AI</span>
+      <span class="tag tag--c">Data</span>
+      <span class="tag tag--d">Product</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="wrap about__grid">
+    <div class="about__copy">
+      <h2>Curiosity, with a technical side.</h2>
+      <p>I'm Kanishka Anand, an MBA Tech (Data Science) student at NMIMS. I enjoy working at the intersection of data, AI, business intelligence, and product development. From building enterprise dashboards and automations during my Adani internship to developing Vybe Learn, an AI-powered personalized learning platform, I like taking ideas from problem statement to practical solution.</p>
+    </div>
+    <figure class="venn">
+      <svg viewBox="0 0 360 320" role="img" aria-labelledby="vennT">
+        <title id="vennT">Four overlapping circles labelled Data, AI, Business and Creativity, with my name where they meet</title>
+        <g style="mix-blend-mode:multiply">
+          <circle cx="140" cy="125" r="96" fill="#4361EE" fill-opacity=".82"/>
+          <circle cx="222" cy="125" r="96" fill="#B9A7F5" fill-opacity=".92"/>
+          <circle cx="140" cy="200" r="96" fill="#DCE2FB"/>
+          <circle cx="222" cy="200" r="96" fill="#F3D6DA"/>
+        </g>
+        <g font-family="Space Grotesk, sans-serif" font-weight="600" font-size="13" letter-spacing="1.2">
+          <text x="92"  y="92"  fill="#F8F7F4" text-anchor="middle">DATA</text>
+          <text x="270" y="92"  fill="#171717" text-anchor="middle">AI</text>
+          <text x="84"  y="250" fill="#171717" text-anchor="middle">BUSINESS</text>
+          <text x="280" y="250" fill="#171717" text-anchor="middle">CREATIVITY</text>
+        </g>
+        <text x="181" y="166" fill="#171717" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="14" text-anchor="middle">Kanishka</text>
+        <circle cx="181" cy="176" r="3" fill="#171717"/>
+      </svg>
+      <figcaption>The work I like best sits where these four overlap.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section case" id="experience">
+  <div class="wrap">
+    <h2>Real problems. Thoughtful solutions.</h2>
+
+    <div class="case__top">
+      <div class="frame" id="dash">
+        <div class="frame__bar">
+          <span class="frame__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <div class="tabs" role="tablist" aria-label="Report pages">
+            <button role="tab" id="tab-env" aria-selected="true" aria-controls="panel-env">Environment</button>
+            <button role="tab" id="tab-bud" aria-selected="false" aria-controls="panel-bud" tabindex="-1">IT Budget</button>
+            <button role="tab" id="tab-sam" aria-selected="false" aria-controls="panel-sam" tabindex="-1">Software Assets</button>
+          </div>
+        </div>
+
+        <!-- Environment -->
+        <svg class="panel" id="panel-env" role="tabpanel" aria-labelledby="tab-env" viewBox="0 0 640 330" aria-label="Illustrative layout of the environment report">
+          <rect width="640" height="330" fill="#FBFAF7"/>
+          <rect x="14" y="14" width="118" height="302" rx="6" fill="#F0EEE8"/>
+          <g font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b">
+            <text x="26" y="38">Location</text><text x="26" y="92">Month</text><text x="26" y="146">Year</text>
+          </g>
+          <g fill="#fff" stroke="#d9d6cd"><rect x="26" y="46" width="94" height="22" rx="4"/><rect x="26" y="100" width="94" height="22" rx="4"/><rect x="26" y="154" width="94" height="22" rx="4"/></g>
+          <g fill="#fff" stroke="#d9d6cd"><rect x="148" y="14" width="148" height="64" rx="6"/><rect x="304" y="14" width="148" height="64" rx="6"/><rect x="460" y="14" width="166" height="64" rx="6"/></g>
+          <g font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b"><text x="162" y="38">Water consumption</text><text x="318" y="38">Power consumption</text><text x="474" y="38">Noise levels</text></g>
+          <g><rect x="162" y="50" width="72" height="12" rx="3" fill="#4361EE"/><rect x="318" y="50" width="72" height="12" rx="3" fill="#B9A7F5"/><rect x="474" y="50" width="72" height="12" rx="3" fill="#F3D6DA"/></g>
+          <rect x="148" y="92" width="300" height="224" rx="6" fill="#fff" stroke="#d9d6cd"/>
+          <text x="162" y="114" font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b">Trend by month</text>
+          <g stroke="#e6e3da"><line x1="162" y1="150" x2="434" y2="150"/><line x1="162" y1="190" x2="434" y2="190"/><line x1="162" y1="230" x2="434" y2="230"/></g>
+          <line x1="162" y1="290" x2="434" y2="290" stroke="#171717"/>
+          <polyline points="162,262 192,248 222,254 252,222 282,232 312,196 342,210 372,176 402,188 434,158" fill="none" stroke="#4361EE" stroke-width="2.5" stroke-linejoin="round"/>
+          <line x1="162" y1="206" x2="434" y2="206" stroke="#171717" stroke-dasharray="5 5"/>
+          <text x="164" y="199" font-family="Inter, sans-serif" font-size="10" fill="#171717">compliance limit</text>
+          <rect x="460" y="92" width="166" height="224" rx="6" fill="#fff" stroke="#d9d6cd"/>
+          <text x="474" y="114" font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b">By location</text>
+          <g fill="#B9A7F5"><rect x="474" y="132" width="110" height="20" rx="3"/><rect x="474" y="168" width="78" height="20" rx="3"/><rect x="474" y="204" width="126" height="20" rx="3"/><rect x="474" y="240" width="58" height="20" rx="3"/></g>
+        </svg>
+
+        <!-- IT Budget -->
+        <svg class="panel" id="panel-bud" role="tabpanel" aria-labelledby="tab-bud" viewBox="0 0 640 330" aria-label="Illustrative layout of the IT budget report" hidden>
+          <rect width="640" height="330" fill="#FBFAF7"/>
+          <rect x="14" y="14" width="118" height="302" rx="6" fill="#F0EEE8"/>
+          <g font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b"><text x="26" y="38">Financial year</text><text x="26" y="92">CapEx / OpEx</text><text x="26" y="146">IT function</text></g>
+          <g fill="#fff" stroke="#d9d6cd"><rect x="26" y="46" width="94" height="22" rx="4"/><rect x="26" y="100" width="94" height="22" rx="4"/><rect x="26" y="154" width="94" height="22" rx="4"/></g>
+          <g fill="#fff" stroke="#d9d6cd"><rect x="148" y="14" width="148" height="64" rx="6"/><rect x="304" y="14" width="148" height="64" rx="6"/><rect x="460" y="14" width="166" height="64" rx="6"/></g>
+          <g font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b"><text x="162" y="38">Budget allocated</text><text x="318" y="38">Utilised</text><text x="474" y="38">Available balance</text></g>
+          <g><rect x="162" y="50" width="72" height="12" rx="3" fill="#4361EE"/><rect x="318" y="50" width="72" height="12" rx="3" fill="#B9A7F5"/><rect x="474" y="50" width="72" height="12" rx="3" fill="#F3D6DA"/></g>
+          <rect x="148" y="92" width="300" height="224" rx="6" fill="#fff" stroke="#d9d6cd"/>
+          <text x="162" y="114" font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b">Budget vs expenditure by financial year</text>
+          <line x1="162" y1="290" x2="434" y2="290" stroke="#171717"/>
+          <g fill="#4361EE"><rect x="182" y="170" width="28" height="120"/><rect x="262" y="150" width="28" height="140"/><rect x="342" y="176" width="28" height="114"/><rect x="408" y="160" width="20" height="130" opacity="0"/></g>
+          <g fill="#B9A7F5"><rect x="214" y="206" width="28" height="84"/><rect x="294" y="182" width="28" height="108"/><rect x="374" y="224" width="28" height="66"/></g>
+          <rect x="460" y="92" width="166" height="224" rx="6" fill="#fff" stroke="#d9d6cd"/>
+          <text x="474" y="114" font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b">Purchase requisitions</text>
+          <g font-family="Inter, sans-serif" font-size="11" fill="#171717"><text x="474" y="148">Mapped</text><text x="474" y="212">Unmapped</text></g>
+          <g><rect x="474" y="156" width="130" height="18" rx="3" fill="#4361EE"/><rect x="474" y="220" width="64" height="18" rx="3" fill="#F3D6DA"/></g>
+        </svg>
+
+        <!-- Software assets -->
+        <svg class="panel" id="panel-sam" role="tabpanel" aria-labelledby="tab-sam" viewBox="0 0 640 330" aria-label="Illustrative layout of the software asset report" hidden>
+          <rect width="640" height="330" fill="#FBFAF7"/>
+          <rect x="14" y="14" width="118" height="302" rx="6" fill="#F0EEE8"/>
+          <g font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b"><text x="26" y="38">Product</text><text x="26" y="92">Department</text><text x="26" y="146">Location</text></g>
+          <g fill="#fff" stroke="#d9d6cd"><rect x="26" y="46" width="94" height="22" rx="4"/><rect x="26" y="100" width="94" height="22" rx="4"/><rect x="26" y="154" width="94" height="22" rx="4"/></g>
+          <g fill="#fff" stroke="#d9d6cd"><rect x="148" y="14" width="148" height="64" rx="6"/><rect x="304" y="14" width="148" height="64" rx="6"/><rect x="460" y="14" width="166" height="64" rx="6"/></g>
+          <g font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b"><text x="162" y="38">Licences</text><text x="318" y="38">Allocated</text><text x="474" y="38">Available</text></g>
+          <g><rect x="162" y="50" width="72" height="12" rx="3" fill="#4361EE"/><rect x="318" y="50" width="72" height="12" rx="3" fill="#B9A7F5"/><rect x="474" y="50" width="72" height="12" rx="3" fill="#F3D6DA"/></g>
+          <rect x="148" y="92" width="300" height="224" rx="6" fill="#fff" stroke="#d9d6cd"/>
+          <text x="162" y="114" font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b">Licence utilisation</text>
+          <circle cx="298" cy="212" r="62" fill="none" stroke="#B9A7F5" stroke-width="24"/>
+          <circle cx="298" cy="212" r="62" fill="none" stroke="#4361EE" stroke-width="24" stroke-dasharray="250 390" transform="rotate(-90 298 212)"/>
+          <rect x="460" y="92" width="166" height="224" rx="6" fill="#fff" stroke="#d9d6cd"/>
+          <text x="474" y="114" font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b">By product</text>
+          <g font-family="Inter, sans-serif" font-size="11" fill="#171717"><text x="474" y="144">Microsoft 365</text><text x="474" y="186">Adobe</text><text x="474" y="228">Bentley</text><text x="474" y="270">Primavera</text></g>
+          <g fill="#4361EE"><rect x="474" y="150" width="120" height="10" rx="3"/><rect x="474" y="192" width="84" height="10" rx="3"/><rect x="474" y="234" width="104" height="10" rx="3"/><rect x="474" y="276" width="60" height="10" rx="3"/></g>
+        </svg>
+        <p class="frame__note">Illustrative layout of the report pages I built. Not actual company data.</p>
+      </div>
+
+      <div class="case__meta">
+        <dl class="meta">
+          <div><dt>Organization</dt><dd>Adani Green PVC / Mundra Petrochem Limited</dd></div>
+          <div><dt>Role</dt><dd>Data &amp; Analytics Intern</dd></div>
+          <div><dt>Worked with</dt><dd>Power BI, Power Query, DAX, Excel, SQL Server, Power Automate, Power Apps, Dataverse, SharePoint</dd></div>
+        </dl>
+        <p class="case__overview">Mundra Petrochem is building India's first coal-based PVC manufacturing facility. I worked on the digital side of that effort: reporting, workflow automation and an application foundation, all aimed at giving teams clearer visibility and less manual work.</p>
+      </div>
+    </div>
+
+    <ul class="highlights">
+      <li>
+        <p class="kicker">Power BI</p>
+        <h3>Environment &amp; Sustainability</h3>
+        <p>Developed Power BI reporting views for environmental monitoring, including water consumption, power consumption, noise levels, and sustainability indicators.</p>
+        <p class="stack">Power Query, data modeling, KPI cards, filters, slicers, time-based and location-based analysis</p>
+      </li>
+      <li>
+        <p class="kicker">Power BI</p>
+        <h3>IT Budget Management</h3>
+        <p>Created interactive reporting to support budget allocation, expenditure monitoring, purchase requisition tracking, financial-year comparisons, and budget visibility.</p>
+        <p class="stack">Power BI, Excel, Power Query, DAX, structured data models</p>
+      </li>
+      <li>
+        <p class="kicker">Power BI</p>
         <h3>Software Asset Management</h3>
-        <p>Unified view of licences and subscriptions across Adobe, Bentley, Copilot, Microsoft 365, Primavera, Visual Studio and Intune. Covers utilisation, renewals and compliance for audit readiness.</p>
-      </article>
-      <article class="card">
-        <span class="kicker">Power Automate</span>
-        <h3>Workflow Automation</h3>
-        <p>SharePoint file monitoring, email notifications and escalations, and a storage-monitoring workflow that tracks folder-level usage, flags threshold breaches and alerts owners. Built with expressions, arrays and conditional logic.</p>
-      </article>
-      <article class="card">
-        <span class="kicker">Power Apps · Dataverse</span>
-        <h3>PMS Companion App (foundation)</h3>
-        <p>Turned Excel employee master data into relational Dataverse tables and defined the architecture for future KPI/KRA tracking, workflows and performance management.</p>
-      </article>
-      <article class="card accent">
-        <span class="kicker">Impact</span>
-        <h3>What it delivered</h3>
-        <ul>
-          <li>A single source of truth replacing fragmented reports</li>
-          <li>Less manual consolidation and fewer errors</li>
-          <li>Proactive alerts before issues hit operations</li>
-          <li>Faster, data-driven decisions for leadership</li>
-        </ul>
-      </article>
-    </div>
-  </section>
+        <p>Developed reporting views for software inventory, license allocation, utilization, subscription status, compliance monitoring, and enterprise software visibility.</p>
+        <p class="stack">Inventory, licensing and subscription data brought into one reporting model</p>
+      </li>
+    </ul>
 
-  <section id="experience" class="reveal">
-    <div class="sec-head"><h2>Experience &amp; Leadership</h2><p>Hackathons, societies and student fests.</p></div>
-
-    <article class="award">
-      <div class="medal" aria-hidden="true">★</div>
-      <div>
-        <h3>Top 20 · GDG Build and Grow AI Hackathon</h3>
-        <p>A 24-hour national competition with 250+ participants across India. Built and pitched an AI-powered solution under extreme time pressure.</p>
+    <div class="build">
+      <h3 class="build__title">Beyond dashboards: automation and application development</h3>
+      <div class="build__grid">
+        <div>
+          <p class="kicker">Power Automate</p>
+          <p>Built Power Automate workflows integrating SharePoint and Outlook for notifications, reminders, file monitoring, storage utilization alerts, and reporting processes.</p>
+          <ol class="flow" aria-label="Example flow: storage utilization alert">
+            <li>SharePoint folder</li>
+            <li>Check utilization</li>
+            <li>Outlook alert</li>
+          </ol>
+        </div>
+        <div>
+          <p class="kicker">Power Apps &amp; Dataverse</p>
+          <p>Explored Power Apps and Dataverse while developing the foundation of a PMS Companion application with structured data models and relational tables.</p>
+        </div>
       </div>
-    </article>
+    </div>
+  </div>
+</section>
 
+<!-- PROJECTS -->
+<section class="section projects" id="projects">
+  <div class="wrap">
+    <h2>A few things I've been building.</h2>
+
+    <div class="pgrid">
+      <!-- Featured -->
+      <article class="project project--feature">
+        <a class="project__shot" href="https://vybelearn.vercel.app/" target="_blank" rel="noopener" aria-label="Open Vybe Learn in a new tab">
+          <span class="shot__bar" aria-hidden="true"><i></i><i></i><i></i><span>vybelearn.vercel.app</span></span>
+          <img src="assets/vybe-learn-preview.webp" width="1520" height="730" alt="Home page of Vybe Learn showing the headline 'Let's vybe' and a friendly robot mascot on a dark background" fetchpriority="low">
+        </a>
+        <div class="project__body">
+          <p class="project__cat">AI / EdTech / Intelligent Learning Systems</p>
+          <h3>Vybe Learn — Personalized Data Science Tutor</h3>
+          <p class="project__time">September 2026 – Present</p>
+          <p>Built the MVP of an AI-powered learning platform featuring a multi-agent tutor and adaptive curriculum. Currently gathering user feedback to guide improvements and wider distribution.</p>
+          <ul class="tags"><li>Multi-agent tutor</li><li>Adaptive curriculum</li><li>LLM integration</li><li>Prompt engineering</li></ul>
+          <a class="btn btn--primary" href="https://vybelearn.vercel.app/" target="_blank" rel="noopener">Explore Vybe Learn</a>
+        </div>
+      </article>
+
+      <!-- Crowd -->
+      <article class="project project--crowd">
+        <figure class="viz viz--dark">
+          <svg id="crowd" viewBox="0 0 288 168" role="img" aria-label="Heatmap of simulated crowd density in a canteen, with two counters on the left, an entry at the bottom and an exit on the right"></svg>
+          <figcaption>
+            <span>Simulated density. Counters left, entry below, exit right.</span>
+            <button type="button" class="linkbtn" id="rerun">Run again</button>
+          </figcaption>
+        </figure>
+        <div class="project__body">
+          <p class="project__cat">Stochastic Modeling / Simulation</p>
+          <h3>Crowd Movement Simulation</h3>
+          <p>Simulated crowd movement in a college canteen using Markov Chains, stochastic modeling, and agent-based simulation.</p>
+          <p>Developed four simulations visualizing crowd density, counter hotspots, exit load, and entry-exit flow imbalances.</p>
+          <ul class="tags"><li>Python</li><li>Markov Chains</li><li>Stochastic Modeling</li><li>Agent-Based Simulation</li></ul>
+        </div>
+      </article>
+
+      <!-- Drowsiness -->
+      <article class="project project--cv">
+        <figure class="viz viz--lav">
+          <svg viewBox="0 0 300 150" role="img" aria-label="Diagram of one eye with six landmark points p1 to p6 used to compute the Eye Aspect Ratio">
+            <path d="M34 78 C78 24 166 24 210 78 C166 128 78 128 34 78 Z" fill="#F8F7F4" stroke="#171717" stroke-width="2"/>
+            <circle cx="122" cy="76" r="20" fill="#4361EE"/><circle cx="122" cy="76" r="8" fill="#171717"/>
+            <g stroke="#171717" stroke-width="1.4" stroke-dasharray="4 4"><line x1="34" y1="78" x2="210" y2="78"/><line x1="84" y1="44" x2="84" y2="112"/><line x1="160" y1="42" x2="160" y2="114"/></g>
+            <g fill="#171717"><circle cx="34" cy="78" r="4"/><circle cx="84" cy="44" r="4"/><circle cx="160" cy="42" r="4"/><circle cx="210" cy="78" r="4"/><circle cx="160" cy="114" r="4"/><circle cx="84" cy="112" r="4"/></g>
+            <g font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600" fill="#171717">
+              <text x="16" y="82">p1</text><text x="78" y="36">p2</text><text x="156" y="34">p3</text><text x="217" y="82">p4</text><text x="156" y="132">p5</text><text x="78" y="130">p6</text>
+            </g>
+          </svg>
+          <svg viewBox="0 0 300 84" role="img" aria-label="Line chart of eye aspect ratio over time dipping below a threshold for a stretch of consecutive frames">
+            <rect x="130" y="6" width="74" height="50" fill="#4361EE" fill-opacity=".22"/>
+            <line x1="8" y1="38" x2="292" y2="38" stroke="#171717" stroke-dasharray="4 4"/>
+            <polyline points="8,16 30,18 46,14 60,32 70,16 92,15 112,18 128,34 140,50 160,52 180,51 200,50 212,30 226,17 250,16 270,18 292,15" fill="none" stroke="#171717" stroke-width="2" stroke-linejoin="round"/>
+            <text x="167" y="74" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="600" fill="#171717">20 consecutive frames below the threshold</text>
+          </svg>
+          <figcaption>EAR = (‖p2−p6‖ + ‖p3−p5‖) / (2‖p1−p4‖). Alert when it stays low.</figcaption>
+        </figure>
+        <div class="project__body">
+          <p class="project__cat">Computer Vision / AI</p>
+          <h3>Driver Drowsiness Detection</h3>
+          <p>Built a real-time driver drowsiness detection system using Python, OpenCV, and Dlib.</p>
+          <p>Used Eye Aspect Ratio (EAR), 68-point facial landmarks, and consecutive-frame monitoring to identify prolonged eye closure and trigger alerts. Generated visual annotations and time-series graphs for alertness analysis.</p>
+          <ul class="tags"><li>Python</li><li>OpenCV</li><li>Dlib</li><li>NumPy</li><li>Matplotlib</li></ul>
+        </div>
+      </article>
+
+      <!-- Superstore -->
+      <article class="project project--stats">
+        <figure class="viz viz--blush">
+          <svg viewBox="0 0 320 170" role="img" aria-label="Histogram of a skewed variable with a fitted probability curve drawn over it">
+            <line x1="20" y1="146" x2="304" y2="146" stroke="#171717" stroke-width="1.6"/>
+            <line x1="20" y1="14" x2="20" y2="146" stroke="#171717" stroke-width="1.6"/>
+            <g fill="#4361EE">
+              <rect x="26" y="40" width="26" height="106"/><rect x="54" y="62" width="26" height="84"/>
+              <rect x="82" y="88" width="26" height="58"/><rect x="110" y="104" width="26" height="42"/>
+              <rect x="138" y="116" width="26" height="30"/><rect x="166" y="126" width="26" height="20"/>
+              <rect x="194" y="133" width="26" height="13"/><rect x="222" y="138" width="26" height="8"/>
+              <rect x="250" y="141" width="26" height="5"/>
+            </g>
+            <path d="M26 30 C70 44 90 84 120 104 C160 128 220 140 280 144" fill="none" stroke="#171717" stroke-width="2.4"/>
+            <g font-family="Space Grotesk, sans-serif" font-size="11" font-weight="600" fill="#171717">
+              <text x="304" y="162" text-anchor="end">Sales</text><text x="28" y="12">Density</text>
+            </g>
+          </svg>
+          <figcaption>Histogram with a fitted distribution, parameters estimated by maximum likelihood.</figcaption>
+        </figure>
+        <div class="project__body">
+          <p class="project__cat">Statistical Computing / Data Analytics</p>
+          <h3>Global Superstore Statistical Analysis</h3>
+          <p>Performed exploratory data analysis and statistical modeling on retail sales, profit, and order data.</p>
+          <p>Applied Normal, Binomial, and Poisson distributions, maximum likelihood estimation, probability functions, normalization, and statistical visualization.</p>
+          <ul class="tags"><li>Python</li><li>Pandas</li><li>NumPy</li><li>SciPy</li><li>Matplotlib</li><li>Seaborn</li></ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLKIT -->
+<section class="section toolkit" id="toolkit">
+  <div class="wrap toolkit__grid">
+    <h2>The tools behind the ideas.</h2>
+    <dl class="rows">
+      <div><dt>Programming</dt><dd>Python, SQL, R, C++</dd></div>
+      <div><dt>Data Science &amp; AI</dt><dd>Exploratory Data Analysis, Feature Engineering, Forecasting, Statistical Modeling, Prompt Engineering, LLM Integration</dd></div>
+      <div><dt>Visualization</dt><dd>Power BI, Tableau, Matplotlib, Seaborn</dd></div>
+      <div><dt>Automation</dt><dd>Power Automate, Power Apps, Dataverse, SharePoint</dd></div>
+      <div><dt>Databases</dt><dd>MySQL, PostgreSQL</dd></div>
+      <div><dt>Development Tools</dt><dd>Git, Google Colab, Jupyter Notebook, Excel</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section education" id="education">
+  <div class="wrap edu__grid">
+    <h2>Currently learning. Always building.</h2>
     <ol class="timeline">
-      <li><time>Jul 2025 – Jul 2026</time><h3>Sub Head (AGM), IETE-SF</h3><p>Brought in high-profile judges, VPs and presidents of leading companies as guests across 4 technical fests, handling logistics from invitation to on-ground execution.</p></li>
-      <li><time>Jul 2025 – Jul 2026</time><h3>Sub Head (Outreach), Taqneeq</h3><p>Led inter-college outreach for the Taqneeq tech fest, driving 50+ participant registrations.</p></li>
-      <li><time>Jul 2024 – Jul 2025</time><h3>Executive, IETE-SF</h3><p>Ran end-to-end publicity campaigns and secured 50+ registrations per event.</p></li>
-      <li><time>Jul 2024 – Jul 2025</time><h3>Executive, MunSoc (MUN Society)</h3><p>Handled publicity and logistics for 2 MUN conferences, with 100+ total registrations.</p></li>
+      <li>
+        <p class="timeline__when">2024–2029</p>
+        <div>
+          <h3>MBA Tech (Data Science)</h3>
+          <p>SVKM's Narsee Monjee Institute of Management Studies (NMIMS)</p>
+          <p class="timeline__meta">Five-year integrated programme · GPA 8.25/10</p>
+        </div>
+      </li>
+      <li>
+        <p class="timeline__when">2024</p>
+        <div>
+          <h3>Class XII</h3>
+          <p>The New Tulip International School</p>
+          <p class="timeline__meta">CBSE · 89%</p>
+        </div>
+      </li>
+      <li>
+        <p class="timeline__when">2022</p>
+        <div>
+          <h3>Class X</h3>
+          <p>Eklavya School</p>
+          <p class="timeline__meta">CBSE · 92%</p>
+        </div>
+      </li>
     </ol>
-  </section>
+  </div>
+</section>
 
-  <section id="skills" class="reveal">
-    <div class="sec-head"><h2>Skills &amp; Education</h2></div>
-    <div class="skills">
-      <div><h3>Programming</h3><ul class="chips"><li>Python</li><li>SQL</li><li>R</li><li>C++</li></ul></div>
-      <div><h3>Visualisation</h3><ul class="chips"><li>Power BI</li><li>Tableau</li><li>Matplotlib</li><li>Seaborn</li></ul></div>
-      <div><h3>Data &amp; AI</h3><ul class="chips"><li>EDA</li><li>Feature Engineering</li><li>Forecasting</li><li>Prompt Engineering (Claude/LLM)</li></ul></div>
-      <div><h3>Tools &amp; Databases</h3><ul class="chips"><li>Git</li><li>Google Colab</li><li>Jupyter</li><li>Excel</li><li>MySQL</li><li>PostgreSQL</li></ul></div>
+<!-- BEYOND -->
+<section class="section beyond" id="beyond">
+  <div class="wrap">
+    <h2>Beyond the screen.</h2>
+    <div class="beyond__grid">
+      <article class="feature">
+        <p class="feature__big">Top 20</p>
+        <h3>GDG Build and Grow AI Hackathon</h3>
+        <p>Ranked among the Top 20 teams in a 24-hour national-level AI hackathon with 250+ participants.</p>
+      </article>
+      <ul class="roles">
+        <li><div><h3>Sub Head (AGM), IETE-SF</h3><p>Coordinated industry guests and judges across four technical festivals.</p></div><time>July 2025 – July 2026</time></li>
+        <li><div><h3>Sub Head (Outreach), Taqneeq</h3><p>Led outreach initiatives and helped drive 50+ participant registrations.</p></div><time>July 2025 – July 2026</time></li>
+        <li><div><h3>Executive, IETE-SF</h3><p>Managed publicity and outreach, securing 50+ registrations per event.</p></div><time>July 2024 – July 2025</time></li>
+        <li><div><h3>Executive, MunSoc</h3><p>Supported publicity and logistics for two Model UN conferences, helping achieve 100+ total registrations.</p></div><time>July 2024 – July 2025</time></li>
+      </ul>
     </div>
+  </div>
+</section>
 
-    <div class="edu">
-      <div><b>MBA Tech (Data Science)</b><span>Narsee Monjee Institute of Management Studies · 5-year integrated programme</span></div><em>2024 – 2029 · 8.25 / 10 GPA</em>
-      <div><b>CBSE Class XII</b><span>The New Tulip International School</span></div><em>2024 · 89%</em>
-      <div><b>CBSE Class X</b><span>Eklavya School</span></div><em>2022 · 92%</em>
-    </div>
-  </section>
-
-  <section id="contact" class="contact reveal">
-    <h2>Let's talk.</h2>
-    <p>Open to internships, projects and conversations about data and AI.</p>
-    <div class="cta center">
-      <a class="btn primary" href="mailto:kanishkaanand0911@gmail.com">kanishkaanand0911@gmail.com</a>
-      <a class="btn" href="https://www.linkedin.com/in/kanishka-anand09" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a class="btn" href="https://vybelearn.vercel.app" target="_blank" rel="noopener">Vybe Learn ↗</a>
-    </div>
-  </section>
 </main>
 
-<footer><span>© <span id="yr">2026</span> Kanishka Anand</span></footer>
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <h2>Have something interesting in mind?</h2>
+    <p class="contact__copy">Whether it's data, AI, a project collaboration, or just an interesting conversation — I'd love to connect.</p>
+    <ul class="contact__links">
+      <li><span>Email</span><a href="mailto:kanishkaanand0911@gmail.com">kanishkaanand0911@gmail.com</a></li>
+      <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/kanishka-anand09" target="_blank" rel="noopener">linkedin.com/in/kanishka-anand09</a></li>
+      <li><span>GitHub</span><a href="https://github.com/kanishkaanand0911-dotcom" target="_blank" rel="noopener">github.com/kanishkaanand0911-dotcom</a></li>
+    </ul>
+    <p class="contact__legal">© 2026 Kanishka Anand. Built with curiosity. <a href="https://github.com/kanishkaanand0911-dotcom/kanishkaanand0911-dotcom.github.io" target="_blank" rel="noopener">Source code</a></p>
+  </div>
+</footer>
+
 <script src="script.js"></script>
 </body>
 </html>
