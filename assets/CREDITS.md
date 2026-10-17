@@ -7,3 +7,4 @@
 - `data-collage.webp`, `data-mood.webp`, `data-ideas.webp`, `data-desk.webp`, `story-meeting.webp`: data-science themed collages and illustrations chosen and supplied by me; used as decoration only.
 - `dance-collage.webp`, `dance-mandala.webp`, `dance-ghungroo.png`: Bharatanatyam themed collage and illustrations chosen and supplied by me; used as decoration only.
 - Original sources of the supplied images were not recorded. They are cropped and resized for this site and are not presented as my own photography.
+- `kanishka-*.webp`: my own photographs (stage, childhood, office and internship), cropped and resized for this site.
