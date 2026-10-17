@@ -77,7 +77,7 @@
   var NS = "http://www.w3.org/2000/svg";
   var counters = [{ x: 3, y: 4 }, { x: 3, y: 9 }];
   var entry = { x: 12, y: 13 }, exit = { x: 23, y: 7 };
-  var stops = ["#1d1d1d", "#4361EE", "#B9A7F5", "#F3D6DA"];
+  var stops = ["#1d1d1d", "#7A1E48", "#D8A33B", "#F0D79A"];
 
   function rng(seed) {
     var a = seed >>> 0;

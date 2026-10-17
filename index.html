@@ -60,12 +60,12 @@
 
     <div class="hero__art">
       <svg class="mandala mandala--hero" viewBox="-100 -100 200 200" aria-hidden="true" focusable="false"><use href="#mandala"/></svg>
-      <!-- PHOTO SLOT: drop a transparent cut-out of you at assets/kanishka-cutout.png and it appears inside the arch. -->
-      <div class="arch" data-speed="0.04">
-        <img class="arch__img" src="assets/data-collage.webp" alt="Collage of data science imagery: code, a neural network, charts and a person at a glowing workstation" width="400" height="636">
-        <img class="slot slot--cutout" src="assets/kanishka-cutout.png" alt="Kanishka Anand" onerror="this.remove()">
+      <div class="arch arch--main" data-speed="0.04">
+        <img class="arch__img" src="assets/kanishka-lobby.webp" alt="Kanishka smiling in a glass and gold office lobby" width="720" height="988">
       </div>
-      <img class="foot" src="assets/dance-ghungroo.png" alt="Illustrated ankle wearing gold ghungroo bells, a Bharatanatyam anklet" width="254" height="361" data-speed="-0.06">
+      <div class="arch arch--dance" data-speed="-0.06">
+        <img class="arch__img" src="assets/kanishka-dance-pose.webp" alt="Kanishka in a Bharatanatyam pose with one leg raised, in an orange and green costume" width="363" height="638">
+      </div>
 
       <div class="terminal" id="terminal">
         <div class="terminal__bar"><i></i><i></i><i></i><span>kanishka@nmims ~</span></div>
@@ -91,7 +91,7 @@
 <section class="section about" id="about">
   <div class="wrap about__grid">
     <div class="about__copy">
-      <h2>Curiosity, with a technical side.</h2>
+      <h2>Curiosity, with a <em>technical</em> side.</h2>
       <p>I'm Kanishka Anand, an MBA Tech (Data Science) student at NMIMS. I enjoy working at the intersection of data, AI, business intelligence, and product development. From building enterprise dashboards and automations during my Adani internship to developing Vybe Learn, an AI-powered personalized learning platform, I like taking ideas from problem statement to practical solution.</p>
       <p>Away from the screen I dance Bharatanatyam (I've completed my Arangetram), read, play basketball, surf, and I'm a big foodie. The stage taught me to practise until it's right and then perform it anyway, which turns out to be most of building products too.</p>
       <ul class="likes" aria-label="Outside of work">
@@ -127,7 +127,7 @@
           <circle cx="140" cy="125" r="96" fill="#4361EE" fill-opacity=".78"/>
           <circle cx="222" cy="125" r="96" fill="#B9A7F5" fill-opacity=".8"/>
           <circle cx="140" cy="200" r="96" fill="#9FB0F5" fill-opacity=".55"/>
-          <circle cx="222" cy="200" r="96" fill="#F3B8C2" fill-opacity=".7"/>
+          <circle cx="222" cy="200" r="96" fill="#E0A63A" fill-opacity=".75"/>
         </g>
         <g fill="none" stroke="#171717" stroke-opacity=".35" stroke-width="1">
           <circle cx="140" cy="125" r="96"/><circle cx="222" cy="125" r="96"/><circle cx="140" cy="200" r="96"/><circle cx="222" cy="200" r="96"/>
@@ -150,11 +150,16 @@
 <section class="section rhythm" id="rhythm">
   <svg class="mandala mandala--bg" viewBox="-100 -100 200 200" aria-hidden="true" focusable="false"><use href="#mandala"/></svg>
   <div class="wrap">
-    <p class="eyebrow">TWO LANGUAGES</p>
     <h2>Two languages, <em>one rhythm.</em></h2>
     <div class="rhythm__grid">
       <div class="rhythm__copy">
-        <p class="rhythm__lead">I trained in Bharatanatyam and completed my Arangetram. I also work with data. They look nothing alike, but both ask for the same three things: rhythm, precision, and a story people can follow.</p>
+        <div class="rhythm__intro">
+          <p class="rhythm__lead">I trained in Bharatanatyam and completed my Arangetram. I also work with data. They look nothing alike, but both ask for the same three things: rhythm, precision, and a story people can follow.</p>
+          <figure class="polaroid">
+            <img src="assets/kanishka-early.webp" alt="Kanishka as a child in a yellow and maroon Bharatanatyam costume, hands held out in a dance pose" width="600" height="800" loading="lazy">
+            <figcaption>Where it started</figcaption>
+          </figure>
+        </div>
 
         <figure class="tala" id="tala">
           <div class="tala__bars" role="img" aria-label="Eight bars of different heights, one per beat of Adi tala, lighting up in turn">
@@ -174,16 +179,13 @@
       </div>
 
       <div class="rhythm__cards">
-        <!-- PHOTO SLOTS: add assets/kanishka-dance.jpg and assets/kanishka-work.jpg to show your own photos on top of these two boards. -->
         <figure class="board board--dance" data-speed="0.05">
-          <img src="assets/dance-collage.webp" alt="Bharatanatyam collage: ghungroo-clad feet, a dancer in silhouette, a Nataraja statue, a veena and a tabla" width="317" height="545" loading="lazy">
-          <img class="slot" src="assets/kanishka-dance.jpg" alt="Kanishka performing Bharatanatyam" onerror="this.remove()">
+          <img src="assets/kanishka-stage.webp" alt="Kanishka performing Bharatanatyam on a dark stage, one arm raised" width="363" height="627" loading="lazy">
           <figcaption>On stage</figcaption>
         </figure>
         <figure class="board board--data" data-speed="-0.05">
-          <img src="assets/data-mood.webp" alt="Data scientist mood board: laptops, code, charts and notes on discipline" width="406" height="606" loading="lazy">
-          <img class="slot" src="assets/kanishka-work.jpg" alt="Kanishka at work" onerror="this.remove()">
-          <figcaption>On screen</figcaption>
+          <img src="assets/kanishka-adani-crop.webp" alt="Kanishka in a white shirt with an office lanyard during her Adani internship" width="820" height="690" loading="lazy">
+          <figcaption>At work</figcaption>
         </figure>
       </div>
     </div>
@@ -193,7 +195,7 @@
 <!-- EXPERIENCE -->
 <section class="section case" id="experience">
   <div class="wrap">
-    <h2>Real problems. Thoughtful solutions.</h2>
+    <h2>Real problems. <em>Thoughtful</em> solutions.</h2>
 
     <div class="case__top">
       <div class="frame" id="dash">
@@ -281,9 +283,10 @@
     </div>
 
     <div class="case__media">
+      <figure class="media--real"><img src="assets/kanishka-adani.webp" alt="Kanishka at the Adani Orientation Month photo frame, 2026" width="600" height="800" loading="lazy"><figcaption><b>Where it began.</b> Adani Orientation Month, 2026.</figcaption></figure>
       <figure><img src="assets/story-meeting.webp" alt="A presenter walking a team through charts on a wall screen" width="390" height="528" loading="lazy"><figcaption><b>Dashboards are for meetings.</b> The goal was a report a whole team could read at a glance.</figcaption></figure>
       <figure><img src="assets/data-desk.webp" alt="A laptop with holographic charts above a desk of notes and sketches" width="408" height="555" loading="lazy"><figcaption><b>Sketch first, then build.</b> Layout and measures were planned on paper before any Power BI work.</figcaption></figure>
-      <p class="case__note">Illustrative images, not photos of the company or its data.</p>
+      <p class="case__note">The meeting and desk images are illustrative, not photos of the company or its data.</p>
     </div>
 
     <ul class="highlights">
@@ -330,8 +333,9 @@
 
 <!-- PROJECTS -->
 <section class="section projects" id="projects">
+  <svg class="mandala mandala--bg mandala--ink" viewBox="-100 -100 200 200" aria-hidden="true" focusable="false"><use href="#mandala"/></svg>
   <div class="wrap">
-    <h2>A few things I've been building.</h2>
+    <h2>A few things I've <em>been building.</em></h2>
 
     <div class="pgrid">
       <!-- Featured -->
@@ -453,11 +457,9 @@
 <section class="section toolkit" id="toolkit">
   <div class="wrap toolkit__grid">
     <div class="toolkit__side">
-      <h2>The tools behind the ideas.</h2>
-      <!-- PHOTO SLOT: add assets/kanishka-about.jpg to show your own photo in this arch. -->
+      <h2>The tools behind the <em>ideas.</em></h2>
       <figure class="arch arch--small">
         <img class="arch__img" src="assets/data-ideas.webp" alt="A person at a desk facing glowing screens, with sparks of data rising above them" width="402" height="555" loading="lazy">
-        <img class="slot" src="assets/kanishka-about.jpg" alt="Kanishka Anand" onerror="this.remove()">
       </figure>
     </div>
     <dl class="rows">
@@ -473,8 +475,9 @@
 
 <!-- EDUCATION -->
 <section class="section education" id="education">
+  <svg class="mandala mandala--bg mandala--ink mandala--left" viewBox="-100 -100 200 200" aria-hidden="true" focusable="false"><use href="#mandala"/></svg>
   <div class="wrap edu__grid">
-    <h2>Currently learning. Always building.</h2>
+    <h2>Currently learning. <em>Always building.</em></h2>
     <ol class="timeline">
       <li>
         <p class="timeline__when">2024–2029</p>
@@ -507,7 +510,7 @@
 <!-- BEYOND -->
 <section class="section beyond" id="beyond">
   <div class="wrap">
-    <h2>Beyond the screen.</h2>
+    <h2>Beyond the <em>screen.</em></h2>
     <div class="beyond__grid">
       <article class="dancecard">
         <img src="assets/dance-mandala.webp" alt="" width="374" height="716" loading="lazy">
@@ -537,6 +540,7 @@
 </main>
 
 <footer class="contact" id="contact">
+  <img class="foot foot--footer" src="assets/dance-ghungroo.png" alt="" width="254" height="361" loading="lazy">
   <svg class="mandala mandala--bg" viewBox="-100 -100 200 200" aria-hidden="true" focusable="false"><use href="#mandala"/></svg>
   <div class="wrap">
     <h2>Have something <em>interesting</em> in mind?</h2>
