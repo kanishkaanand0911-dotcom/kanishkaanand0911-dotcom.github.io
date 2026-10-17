@@ -1,185 +1,34 @@
 (function () {
   "use strict";
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var root = document.documentElement;
+  root.classList.add("js");
 
-  /* ---------- Mobile menu ---------- */
+  /* mobile menu */
   var toggle = document.getElementById("navToggle");
   var links = document.getElementById("navLinks");
   function setMenu(open) {
     links.classList.toggle("is-open", open);
     toggle.setAttribute("aria-expanded", String(open));
   }
-  toggle.addEventListener("click", function () {
-    setMenu(!links.classList.contains("is-open"));
-  });
-  links.addEventListener("click", function (e) {
-    if (e.target.tagName === "A") setMenu(false);
-  });
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") setMenu(false);
-  });
+  toggle.addEventListener("click", function () { setMenu(!links.classList.contains("is-open")); });
+  links.addEventListener("click", function (e) { if (e.target.tagName === "A") setMenu(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false); });
 
-  /* ---------- Active nav link ---------- */
-  var navAnchors = Array.prototype.slice.call(links.querySelectorAll('a[href^="#"]'));
+  /* active nav link */
+  var anchors = Array.prototype.slice.call(links.querySelectorAll('a[href^="#"]'));
   if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (entries) {
+    var spy = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
-        navAnchors.forEach(function (a) {
-          a.classList.toggle("is-active", a.getAttribute("href") === "#" + en.target.id);
-        });
+        anchors.forEach(function (a) { a.classList.toggle("is-active", a.getAttribute("href") === "#" + en.target.id); });
       });
     }, { rootMargin: "-45% 0px -50% 0px" });
-    navAnchors.forEach(function (a) {
-      var s = document.querySelector(a.getAttribute("href"));
-      if (s) io.observe(s);
-    });
+    anchors.forEach(function (a) { var s = document.querySelector(a.getAttribute("href")); if (s) spy.observe(s); });
   }
 
-  /* ---------- Terminal: one typed sequence on load ---------- */
-  var body = document.getElementById("terminalBody");
-  if (body && !reduce) {
-    var lines = Array.prototype.slice.call(body.querySelectorAll(".t-line"));
-    lines.forEach(function (l) { l.style.visibility = "hidden"; });
-    var i = 0;
-    (function next() {
-      if (i >= lines.length) return;
-      var line = lines[i++];
-      line.style.visibility = "visible";
-      var isCmd = !line.classList.contains("t-out");
-      setTimeout(next, isCmd ? 520 : 340);
-    })();
-  }
-
-  /* ---------- Report tabs ---------- */
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('#dash [role="tab"]'));
-  function select(tab) {
-    tabs.forEach(function (t) {
-      var on = t === tab;
-      t.setAttribute("aria-selected", String(on));
-      t.tabIndex = on ? 0 : -1;
-      document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
-    });
-  }
-  tabs.forEach(function (t, idx) {
-    t.addEventListener("click", function () { select(t); });
-    t.addEventListener("keydown", function (e) {
-      var n = null;
-      if (e.key === "ArrowRight") n = tabs[(idx + 1) % tabs.length];
-      if (e.key === "ArrowLeft") n = tabs[(idx - 1 + tabs.length) % tabs.length];
-      if (n) { e.preventDefault(); select(n); n.focus(); }
-    });
-  });
-
-  /* ---------- Crowd simulation (tiny Markov-style agent model) ---------- */
-  var svg = document.getElementById("crowd");
-  var W = 24, H = 14, C = 12;
-  var NS = "http://www.w3.org/2000/svg";
-  var counters = [{ x: 3, y: 4 }, { x: 3, y: 9 }];
-  var entry = { x: 12, y: 13 }, exit = { x: 23, y: 7 };
-  var stops = ["#1d1d1d", "#7A1E48", "#D8A33B", "#F0D79A"];
-
-  function rng(seed) {
-    var a = seed >>> 0;
-    return function () {
-      a |= 0; a = (a + 0x6D2B79F5) | 0;
-      var t = Math.imul(a ^ (a >>> 15), 1 | a);
-      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-    };
-  }
-  function hex(h) { return [1, 3, 5].map(function (i) { return parseInt(h.substr(i, 2), 16); }); }
-  function colour(v) {
-    var p = v * (stops.length - 1), k = Math.min(Math.floor(p), stops.length - 2), f = p - k;
-    var a = hex(stops[k]), b = hex(stops[k + 1]);
-    return "rgb(" + a.map(function (c, i) { return Math.round(c + (b[i] - c) * f); }).join(",") + ")";
-  }
-  function step(pos, target, r) {
-    var dx = Math.sign(target.x - pos.x), dy = Math.sign(target.y - pos.y);
-    if (r() < 0.72) {
-      if (dx && dy) { if (r() < 0.5) pos.x += dx; else pos.y += dy; }
-      else { pos.x += dx; pos.y += dy; }
-    } else {
-      var d = [[1, 0], [-1, 0], [0, 1], [0, -1]][Math.floor(r() * 4)];
-      pos.x = Math.min(W - 1, Math.max(0, pos.x + d[0]));
-      pos.y = Math.min(H - 1, Math.max(0, pos.y + d[1]));
-    }
-  }
-  function simulate(seed) {
-    var r = rng(seed), visits = [], n, t;
-    for (n = 0; n < W * H; n++) visits.push(0);
-    for (n = 0; n < 160; n++) {
-      var pos = { x: entry.x, y: entry.y };
-      var c = counters[r() < 0.6 ? 0 : 1];
-      var phase = 0, wait = 0, born = Math.floor(r() * 300);
-      for (t = 0; t < 260; t++) {
-        if (t < born) continue;
-        if (phase === 0) { step(pos, c, r); if (pos.x === c.x && pos.y === c.y) { phase = 1; wait = 6 + Math.floor(r() * 18); } }
-        else if (phase === 1) { wait--; if (wait <= 0) phase = 2; }
-        else { step(pos, exit, r); if (pos.x === exit.x && pos.y === exit.y) break; }
-        visits[pos.y * W + pos.x]++;
-      }
-    }
-    return visits;
-  }
-  function draw(visits) {
-    var max = Math.max.apply(null, visits) || 1;
-    svg.textContent = "";
-    for (var y = 0; y < H; y++) {
-      for (var x = 0; x < W; x++) {
-        var rect = document.createElementNS(NS, "rect");
-        rect.setAttribute("x", x * C); rect.setAttribute("y", y * C);
-        rect.setAttribute("width", C - 1); rect.setAttribute("height", C - 1);
-        rect.setAttribute("rx", 1.5);
-        rect.setAttribute("fill", colour(Math.sqrt(visits[y * W + x] / max)));
-        svg.appendChild(rect);
-      }
-    }
-    annotate();
-  }
-  function el(name, attrs, text) {
-    var n = document.createElementNS(NS, name);
-    Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); });
-    if (text) n.textContent = text;
-    return n;
-  }
-  function outline(p) {
-    svg.appendChild(el("rect", { x: p.x * C - 1, y: p.y * C - 1, width: C + 1, height: C + 1, fill: "none", stroke: "#F8F7F4", "stroke-width": 1.6 }));
-  }
-  function label(x, y, text, anchor) {
-    svg.appendChild(el("text", {
-      x: x, y: y, "text-anchor": anchor || "start", fill: "#F8F7F4", stroke: "#171717", "stroke-width": 3,
-      "paint-order": "stroke", "font-family": "Space Grotesk, sans-serif", "font-size": 10.5, "font-weight": 600
-    }, text));
-  }
-  function annotate() {
-    counters.forEach(function (c, i) { outline(c); label(c.x * C + C + 5, c.y * C + 9, "Counter " + "AB"[i]); });
-    outline(entry); label(entry.x * C + C / 2, H * C + 12, "Entry", "middle");
-    outline(exit); label(exit.x * C - 5, exit.y * C - 4, "Exit", "end");
-    var defs = el("defs", {});
-    var g = el("linearGradient", { id: "crowdLegend", x1: "0", x2: "1", y1: "0", y2: "0" });
-    stops.forEach(function (s, i) { g.appendChild(el("stop", { offset: i / (stops.length - 1), "stop-color": s })); });
-    defs.appendChild(g); svg.appendChild(defs);
-    svg.appendChild(el("rect", { x: 0, y: 190, width: 110, height: 7, rx: 1.5, fill: "url(#crowdLegend)", stroke: "#555", "stroke-width": .5 }));
-    svg.appendChild(el("text", { x: 118, y: 197, fill: "#cfcdc6", "font-family": "Inter, sans-serif", "font-size": 9.5 }, "less to more time spent in each cell"));
-  }
-  if (svg) {
-    draw(simulate(11));
-    var btn = document.getElementById("rerun");
-    if (btn) btn.addEventListener("click", function () { draw(simulate((Date.now() & 0xffff) + 1)); });
-  }
-})();
-
-/* ---------- Immersive layer ---------- */
-(function () {
-  "use strict";
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var root = document.documentElement;
-  root.classList.add("js");
-
-  /* scroll progress + light parallax */
+  /* scroll progress */
   var bar = document.getElementById("progress");
-  var par = Array.prototype.slice.call(document.querySelectorAll("[data-speed]"));
   var ticking = false;
   function onScroll() {
     if (ticking) return;
@@ -187,37 +36,19 @@
     requestAnimationFrame(function () {
       var max = root.scrollHeight - innerHeight;
       if (bar) bar.style.transform = "scaleX(" + (max > 0 ? scrollY / max : 0) + ")";
-      if (!reduce && innerWidth > 640) {
-        par.forEach(function (el) {
-          var r = el.getBoundingClientRect();
-          var d = (r.top + r.height / 2 - innerHeight / 2) * parseFloat(el.getAttribute("data-speed"));
-          el.style.translate = "0 " + d.toFixed(1) + "px";
-        });
-      }
       ticking = false;
     });
   }
   addEventListener("scroll", onScroll, { passive: true });
-  addEventListener("resize", onScroll);
   onScroll();
 
   /* reveal on scroll */
-  var targets = document.querySelectorAll(".section h2, .about__copy, .venn, .project, .highlights li, .build, .case__media figure, .rows div, .timeline li, .roles li, .feature, .dancecard, .pairs div, .tala, .board, .toolkit__side .arch");
+  var targets = document.querySelectorAll(".head, .split > *, .card, .pairs div");
   if ("IntersectionObserver" in window && !reduce) {
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
     targets.forEach(function (t) { t.classList.add("reveal"); io.observe(t); });
-  }
-
-  /* gold spotlight follows the pointer in the hero */
-  var hero = document.querySelector(".hero");
-  if (hero && !reduce) {
-    hero.addEventListener("pointermove", function (e) {
-      var r = hero.getBoundingClientRect();
-      hero.style.setProperty("--mx", (e.clientX - r.left) + "px");
-      hero.style.setProperty("--my", (e.clientY - r.top) + "px");
-    });
   }
 
   /* Adi tala: eight beats lighting up in turn */
@@ -226,18 +57,17 @@
     var bars = tala.querySelectorAll(".tala__bars span");
     var syl = tala.querySelectorAll(".tala__syl b");
     var beat = 0, paused = false;
-    function show(n) {
+    var show = function (n) {
       for (var i = 0; i < bars.length; i++) {
         bars[i].classList.toggle("is-on", i === n);
         syl[i].classList.toggle("is-on", i === n);
       }
+    };
+    show(0);
+    if (!reduce) {
+      tala.addEventListener("pointerenter", function () { paused = true; });
+      tala.addEventListener("pointerleave", function () { paused = false; });
+      setInterval(function () { if (paused) return; beat = (beat + 1) % bars.length; show(beat); }, 480);
     }
-    if (reduce) { show(0); return; }
-    tala.addEventListener("pointerenter", function () { paused = true; });
-    tala.addEventListener("pointerleave", function () { paused = false; });
-    for (var k = 0; k < bars.length; k++) {
-      (function (i) { bars[i].addEventListener("pointerenter", function () { beat = i; show(i); }); })(k);
-    }
-    setInterval(function () { if (paused) return; show(beat); beat = (beat + 1) % bars.length; }, 480);
   }
 })();

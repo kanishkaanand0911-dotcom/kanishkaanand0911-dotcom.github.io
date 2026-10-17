@@ -3,16 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kanishka Anand | Data Science × AI × Building</title>
-<meta name="description" content="Kanishka Anand is an MBA Tech (Data Science) student at NMIMS and a Bharatanatyam dancer who turns data into decisions and ideas into working products. Projects, internship and contact.">
+<title>Kanishka Anand | Data Science × AI × Bharatanatyam</title>
+<meta name="description" content="Kanishka Anand, MBA Tech (Data Science) student at NMIMS. Data and analytics internship at Adani Green PVC and Vybe Learn, an AI tutor for data science.">
 <meta name="theme-color" content="#0F0D17">
-<meta property="og:title" content="Kanishka Anand | Data Science × AI × Building">
-<meta property="og:description" content="Data Science student. AI builder. Curious problem-solver. Creator of Vybe Learn.">
+<meta property="og:title" content="Kanishka Anand | Data Science × AI × Bharatanatyam">
+<meta property="og:description" content="Data and analytics intern. Creator of Vybe Learn.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%234361EE'/%3E%3Cpath d='M20 14v36M20 34l22-20M26 30l18 20' stroke='%23F8F7F4' stroke-width='6' fill='none'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230F0D17'/%3E%3Cpath d='M16 50V30a16 16 0 0 1 32 0v20' fill='none' stroke='%23D8A33B' stroke-width='6'/%3E%3C/svg%3E">
 <link rel="preload" href="assets/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fraunces-latin-wght-italic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,12 +24,11 @@
     <a class="nav__brand" href="#top" aria-label="Kanishka Anand, back to top"><span class="nav__mark" aria-hidden="true"></span>Kanishka Anand</a>
     <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
     <nav class="nav__links" id="navLinks" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
+      <a href="#internship">Internship</a>
+      <a href="#vybe">Vybe Learn</a>
       <a href="#projects">Projects</a>
-      <a href="#toolkit">Toolkit</a>
-      <a href="#education">Education</a>
-      <a href="#beyond">Beyond</a>
+      <a href="#dance">Dance</a>
+      <a href="#about">About</a>
       <a href="#contact" class="nav__cta">Contact</a>
     </nav>
   </div>
@@ -40,517 +38,134 @@
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <div class="hero__grid-bg" aria-hidden="true"></div>
   <div class="wrap hero__grid">
     <div class="hero__copy">
       <p class="eyebrow">DATA SCIENCE × AI × BHARATANATYAM</p>
-      <h1>Hey, I'm <em>Kanishka.</em></h1>
-      <p class="hero__lead">I turn data into decisions and ambitious ideas into working products.</p>
-      <p class="hero__intro">Data Science student. AI builder. Bharatanatyam dancer. Curious problem-solver.</p>
+      <h1>Kanishka Anand</h1>
+      <p class="hero__lead">MBA Tech (Data Science) student at NMIMS. I turn data into decisions and ideas into working products.</p>
       <div class="actions">
-        <a class="btn btn--primary" href="#projects">Explore Projects</a>
-        <a class="btn" href="#rhythm">Dance × Data</a>
+        <a class="btn btn--primary" href="#internship">Internship</a>
+        <a class="btn" href="#vybe">Vybe Learn</a>
       </div>
-      <dl class="now">
-        <div><dt>Building</dt><dd><a href="https://vybelearn.vercel.app/" target="_blank" rel="noopener">Vybe Learn</a>, an AI tutor for data science</dd></div>
-        <div><dt>Interned at</dt><dd><a href="#experience">Adani Green PVC / Mundra Petrochem</a>, Data &amp; Analytics</dd></div>
-        <div><dt>Studying</dt><dd>MBA Tech (Data Science), NMIMS Mumbai</dd></div>
-      </dl>
     </div>
-
     <div class="hero__art">
       <svg class="mandala mandala--hero" viewBox="-100 -100 200 200" aria-hidden="true" focusable="false"><use href="#mandala"/></svg>
-      <div class="arch arch--main" data-speed="0.04">
-        <img class="arch__img" src="assets/kanishka-lobby.webp" alt="Kanishka smiling in a glass and gold office lobby" width="720" height="988">
-      </div>
-      <div class="arch arch--dance" data-speed="-0.06">
-        <img class="arch__img" src="assets/kanishka-dance-pose.webp" alt="Kanishka in a Bharatanatyam pose with one leg raised, in an orange and green costume" width="363" height="638">
-      </div>
-
-      <div class="terminal" id="terminal">
-        <div class="terminal__bar"><i></i><i></i><i></i><span>kanishka@nmims ~</span></div>
-        <div class="terminal__body" id="terminalBody">
-          <p class="t-line"><span class="t-prompt">$</span> whoami</p>
-          <p class="t-line t-out">data science student, nmims</p>
-          <p class="t-line"><span class="t-prompt">$</span> now --building</p>
-          <p class="t-line t-out">vybe-learn  <span class="t-dim"># ai tutor</span></p>
-          <p class="t-line"><span class="t-prompt">$</span> tala --cycle</p>
-          <p class="t-line t-out">ta ka dhi mi ta ka jo nu</p>
-          <p class="t-line"><span class="t-prompt">$</span> <span class="t-caret"></span></p>
-        </div>
-      </div>
-
-      <span class="tag tag--a">Python</span>
-      <span class="tag tag--b">Bharatanatyam</span>
-      <span class="tag tag--c">AI</span>
+      <figure class="arch"><img src="assets/kanishka-lobby.webp" alt="Kanishka smiling in a glass and gold office lobby" width="720" height="988"><figcaption>Data</figcaption></figure>
+      <figure class="arch"><img src="assets/kanishka-dance-pose.webp" alt="Kanishka in a Bharatanatyam pose with one leg raised, in an orange and green costume" width="363" height="638"><figcaption>Dance</figcaption></figure>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="section about" id="about">
-  <div class="wrap about__grid">
-    <div class="about__copy">
-      <h2>Curiosity, with a <em>technical</em> side.</h2>
-      <p>I'm Kanishka Anand, an MBA Tech (Data Science) student at NMIMS. I enjoy working at the intersection of data, AI, business intelligence, and product development. From building enterprise dashboards and automations during my Adani internship to developing Vybe Learn, an AI-powered personalized learning platform, I like taking ideas from problem statement to practical solution.</p>
-      <p>Away from the screen I dance Bharatanatyam (I've completed my Arangetram), read, play basketball, surf, and I'm a big foodie. The stage taught me to practise until it's right and then perform it anyway, which turns out to be most of building products too.</p>
-      <ul class="likes" aria-label="Outside of work">
-        <li><svg class="like__icon like__icon--bells" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-          <path d="M6 22 Q32 44 58 22" fill="none" stroke="#171717" stroke-width="2.5" stroke-linecap="round"/>
-          <g fill="#4361EE" stroke="#171717" stroke-width="2">
-            <circle cx="13.8" cy="34.6" r="4.5"/><circle cx="22.9" cy="38.6" r="4.5"/><circle cx="32" cy="40" r="4.5"/><circle cx="41.1" cy="38.6" r="4.5"/><circle cx="50.2" cy="34.6" r="4.5"/>
-          </g>
-        </svg><span>Dance</span></li>
-        <li><svg class="like__icon like__icon--book" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-          <path d="M8 14 H30 Q32 14 32 16 V50 Q32 48 30 48 H8 Z" fill="#B9A7F5" stroke="#171717" stroke-width="2.5" stroke-linejoin="round"/>
-          <path d="M56 14 H34 Q32 14 32 16 V50 Q32 48 34 48 H56 Z" fill="#F8F7F4" stroke="#171717" stroke-width="2.5" stroke-linejoin="round"/>
-          <g stroke="#171717" stroke-width="1.6" stroke-linecap="round"><line x1="14" y1="24" x2="26" y2="24"/><line x1="14" y1="31" x2="26" y2="31"/><line x1="38" y1="24" x2="50" y2="24"/><line x1="38" y1="31" x2="50" y2="31"/></g>
-        </svg><span>Books</span></li>
-        <li><svg class="like__icon like__icon--ball" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-          <circle cx="32" cy="32" r="22" fill="#F3D6DA" stroke="#171717" stroke-width="2.5"/>
-          <g fill="none" stroke="#171717" stroke-width="2.2" stroke-linecap="round"><line x1="32" y1="10" x2="32" y2="54"/><line x1="10" y1="32" x2="54" y2="32"/><path d="M15 16 Q32 32 15 48"/><path d="M49 16 Q32 32 49 48"/></g>
-        </svg><span>Basketball</span></li>
-        <li><svg class="like__icon like__icon--wave" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-          <path d="M4 48 C16 48 22 40 24 30 C26 18 38 12 48 18 C40 18 36 24 38 32 C40 42 50 46 60 46" fill="none" stroke="#171717" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M4 56 Q12 51 20 56 T36 56 T52 56 T64 55" fill="none" stroke="#4361EE" stroke-width="2.5" stroke-linecap="round"/>
-        </svg><span>Surfing</span></li>
-        <li><svg class="like__icon like__icon--bowl" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-          <path d="M10 32 H54 C54 46 44 54 32 54 C20 54 10 46 10 32 Z" fill="#B9A7F5" stroke="#171717" stroke-width="2.5" stroke-linejoin="round"/>
-          <g class="steam" fill="none" stroke="#171717" stroke-width="2.2" stroke-linecap="round"><path d="M24 25 Q20 19 24 13"/><path d="M32 26 Q28 18 32 10"/><path d="M40 25 Q36 19 40 13"/></g>
-        </svg><span>Food</span></li>
-      </ul>
-    </div>
-    <figure class="venn">
-      <svg viewBox="0 0 360 320" role="img" aria-labelledby="vennT">
-        <title id="vennT">Four overlapping circles labelled Data, AI, Business and Creativity, with my name where they meet</title>
-        <g style="mix-blend-mode:multiply">
-          <circle cx="140" cy="125" r="96" fill="#4361EE" fill-opacity=".78"/>
-          <circle cx="222" cy="125" r="96" fill="#B9A7F5" fill-opacity=".8"/>
-          <circle cx="140" cy="200" r="96" fill="#9FB0F5" fill-opacity=".55"/>
-          <circle cx="222" cy="200" r="96" fill="#E0A63A" fill-opacity=".75"/>
-        </g>
-        <g fill="none" stroke="#171717" stroke-opacity=".35" stroke-width="1">
-          <circle cx="140" cy="125" r="96"/><circle cx="222" cy="125" r="96"/><circle cx="140" cy="200" r="96"/><circle cx="222" cy="200" r="96"/>
-        </g>
-        <g font-family="Space Grotesk, sans-serif" font-weight="600" font-size="13" letter-spacing="1.2">
-          <text x="92"  y="92"  fill="#F8F7F4" text-anchor="middle">DATA</text>
-          <text x="270" y="92"  fill="#171717" text-anchor="middle">AI</text>
-          <text x="84"  y="250" fill="#171717" text-anchor="middle">BUSINESS</text>
-          <text x="280" y="250" fill="#171717" text-anchor="middle">CREATIVITY</text>
-        </g>
-        <text x="181" y="166" fill="#171717" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="14" text-anchor="middle">Kanishka</text>
-        <circle cx="181" cy="176" r="3" fill="#171717"/>
-      </svg>
-      <figcaption>The work I like best sits where these four overlap.</figcaption>
-    </figure>
-  </div>
-</section>
-
-<!-- RHYTHM -->
-<section class="section rhythm" id="rhythm">
-  <svg class="mandala mandala--bg" viewBox="-100 -100 200 200" aria-hidden="true" focusable="false"><use href="#mandala"/></svg>
+<!-- INTERNSHIP -->
+<section class="section" id="internship">
   <div class="wrap">
-    <h2>Two languages, <em>one rhythm.</em></h2>
-    <div class="rhythm__grid">
-      <div class="rhythm__copy">
-        <div class="rhythm__intro">
-          <p class="rhythm__lead">I trained in Bharatanatyam and completed my Arangetram. I also work with data. They look nothing alike, but both ask for the same three things: rhythm, precision, and a story people can follow.</p>
-          <figure class="polaroid">
-            <img src="assets/kanishka-early.webp" alt="Kanishka as a child in a yellow and maroon Bharatanatyam costume, hands held out in a dance pose" width="600" height="800" loading="lazy">
-            <figcaption>Where it started</figcaption>
-          </figure>
-        </div>
-
-        <figure class="tala" id="tala">
-          <div class="tala__bars" role="img" aria-label="Eight bars of different heights, one per beat of Adi tala, lighting up in turn">
-            <span style="--h:100"></span><span style="--h:52"></span><span style="--h:68"></span><span style="--h:52"></span><span style="--h:88"></span><span style="--h:52"></span><span style="--h:68"></span><span style="--h:52"></span>
-          </div>
-          <div class="tala__syl" aria-hidden="true"><b>Tha</b><b>Ka</b><b>Dhi</b><b>Mi</b><b>Tha</b><b>Ka</b><b>Jo</b><b>Nu</b></div>
-          <figcaption>Adi tala, eight beats, drawn as a histogram. Hover to hold the beat.</figcaption>
-        </figure>
-
-        <dl class="pairs">
-          <div><dt><span>On stage</span>Tala</dt><dd><span>In data</span>Time series. Patterns that repeat, and the beat that breaks them.</dd></div>
-          <div><dt><span>On stage</span>Adavu</dt><dd><span>In data</span>Algorithms. Small steps, practised until they're exact.</dd></div>
-          <div><dt><span>On stage</span>Mudra</dt><dd><span>In data</span>Features. Every gesture carries one specific meaning.</dd></div>
-          <div><dt><span>On stage</span>Abhinaya</dt><dd><span>In data</span>Storytelling. Dashboards that make people feel the point.</dd></div>
-          <div><dt><span>On stage</span>Sadhana</dt><dd><span>In data</span>Iteration. Practice every day, better every pass.</dd></div>
-        </dl>
-      </div>
-
-      <div class="rhythm__cards">
-        <figure class="board board--dance" data-speed="0.05">
-          <img src="assets/kanishka-stage.webp" alt="Kanishka performing Bharatanatyam on a dark stage, one arm raised" width="363" height="627" loading="lazy">
-          <figcaption>On stage</figcaption>
-        </figure>
-        <figure class="board board--data" data-speed="-0.05">
-          <img src="assets/kanishka-adani-crop.webp" alt="Kanishka in a white shirt with an office lanyard during her Adani internship" width="820" height="690" loading="lazy">
-          <figcaption>At work</figcaption>
-        </figure>
+    <header class="head"><span class="num">01</span><h2>Internship</h2></header>
+    <div class="split">
+      <figure class="photo arch">
+        <img src="assets/kanishka-adani.webp" alt="Kanishka at the Adani Orientation Month photo frame, 2026" width="600" height="800" loading="lazy">
+      </figure>
+      <div class="panel">
+        <h3>Data &amp; Analytics Intern</h3>
+        <p class="sub">Adani Green PVC / Mundra Petrochem Limited</p>
+        <p>Built reporting, workflow automation and an app foundation for India's first coal-based PVC facility, giving teams clearer visibility and less manual work.</p>
+        <ul class="chips">
+          <li>Power BI</li><li>DAX</li><li>Power Query</li><li>SQL Server</li><li>Power Automate</li><li>Power Apps</li><li>Dataverse</li>
+        </ul>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section class="section case" id="experience">
-  <div class="wrap">
-    <h2>Real problems. <em>Thoughtful</em> solutions.</h2>
-
-    <div class="case__top">
-      <div class="frame" id="dash">
-        <div class="frame__bar">
-          <span class="frame__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-          <div class="tabs" role="tablist" aria-label="Report pages">
-            <button role="tab" id="tab-env" aria-selected="true" aria-controls="panel-env">Environment</button>
-            <button role="tab" id="tab-bud" aria-selected="false" aria-controls="panel-bud" tabindex="-1">IT Budget</button>
-            <button role="tab" id="tab-sam" aria-selected="false" aria-controls="panel-sam" tabindex="-1">Software Assets</button>
-          </div>
-        </div>
-
-        <!-- Environment -->
-        <svg class="panel" id="panel-env" role="tabpanel" aria-labelledby="tab-env" viewBox="0 0 640 330" aria-label="Illustrative layout of the environment report">
-          <rect width="640" height="330" fill="#FBFAF7"/>
-          <rect x="14" y="14" width="118" height="302" rx="6" fill="#F0EEE8"/>
-          <g font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b">
-            <text x="26" y="38">Location</text><text x="26" y="92">Month</text><text x="26" y="146">Year</text>
-          </g>
-          <g fill="#fff" stroke="#d9d6cd"><rect x="26" y="46" width="94" height="22" rx="4"/><rect x="26" y="100" width="94" height="22" rx="4"/><rect x="26" y="154" width="94" height="22" rx="4"/></g>
-          <g fill="#fff" stroke="#d9d6cd"><rect x="148" y="14" width="148" height="64" rx="6"/><rect x="304" y="14" width="148" height="64" rx="6"/><rect x="460" y="14" width="166" height="64" rx="6"/></g>
-          <g font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b"><text x="162" y="38">Water consumption</text><text x="318" y="38">Power consumption</text><text x="474" y="38">Noise levels</text></g>
-          <g><rect x="162" y="50" width="72" height="12" rx="3" fill="#4361EE"/><rect x="318" y="50" width="72" height="12" rx="3" fill="#B9A7F5"/><rect x="474" y="50" width="72" height="12" rx="3" fill="#F3D6DA"/></g>
-          <rect x="148" y="92" width="300" height="224" rx="6" fill="#fff" stroke="#d9d6cd"/>
-          <text x="162" y="114" font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b">Trend by month</text>
-          <g stroke="#e6e3da"><line x1="162" y1="150" x2="434" y2="150"/><line x1="162" y1="190" x2="434" y2="190"/><line x1="162" y1="230" x2="434" y2="230"/></g>
-          <line x1="162" y1="290" x2="434" y2="290" stroke="#171717"/>
-          <polyline points="162,262 192,248 222,254 252,222 282,232 312,196 342,210 372,176 402,188 434,158" fill="none" stroke="#4361EE" stroke-width="2.5" stroke-linejoin="round"/>
-          <line x1="162" y1="206" x2="434" y2="206" stroke="#171717" stroke-dasharray="5 5"/>
-          <text x="164" y="199" font-family="Inter, sans-serif" font-size="10" fill="#171717">compliance limit</text>
-          <rect x="460" y="92" width="166" height="224" rx="6" fill="#fff" stroke="#d9d6cd"/>
-          <text x="474" y="114" font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b">By location</text>
-          <g fill="#B9A7F5"><rect x="474" y="132" width="110" height="20" rx="3"/><rect x="474" y="168" width="78" height="20" rx="3"/><rect x="474" y="204" width="126" height="20" rx="3"/><rect x="474" y="240" width="58" height="20" rx="3"/></g>
-        </svg>
-
-        <!-- IT Budget -->
-        <svg class="panel" id="panel-bud" role="tabpanel" aria-labelledby="tab-bud" viewBox="0 0 640 330" aria-label="Illustrative layout of the IT budget report" hidden>
-          <rect width="640" height="330" fill="#FBFAF7"/>
-          <rect x="14" y="14" width="118" height="302" rx="6" fill="#F0EEE8"/>
-          <g font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b"><text x="26" y="38">Financial year</text><text x="26" y="92">CapEx / OpEx</text><text x="26" y="146">IT function</text></g>
-          <g fill="#fff" stroke="#d9d6cd"><rect x="26" y="46" width="94" height="22" rx="4"/><rect x="26" y="100" width="94" height="22" rx="4"/><rect x="26" y="154" width="94" height="22" rx="4"/></g>
-          <g fill="#fff" stroke="#d9d6cd"><rect x="148" y="14" width="148" height="64" rx="6"/><rect x="304" y="14" width="148" height="64" rx="6"/><rect x="460" y="14" width="166" height="64" rx="6"/></g>
-          <g font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b"><text x="162" y="38">Budget allocated</text><text x="318" y="38">Utilised</text><text x="474" y="38">Available balance</text></g>
-          <g><rect x="162" y="50" width="72" height="12" rx="3" fill="#4361EE"/><rect x="318" y="50" width="72" height="12" rx="3" fill="#B9A7F5"/><rect x="474" y="50" width="72" height="12" rx="3" fill="#F3D6DA"/></g>
-          <rect x="148" y="92" width="300" height="224" rx="6" fill="#fff" stroke="#d9d6cd"/>
-          <text x="162" y="114" font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b">Budget vs expenditure by financial year</text>
-          <line x1="162" y1="290" x2="434" y2="290" stroke="#171717"/>
-          <g fill="#4361EE"><rect x="182" y="170" width="28" height="120"/><rect x="262" y="150" width="28" height="140"/><rect x="342" y="176" width="28" height="114"/><rect x="408" y="160" width="20" height="130" opacity="0"/></g>
-          <g fill="#B9A7F5"><rect x="214" y="206" width="28" height="84"/><rect x="294" y="182" width="28" height="108"/><rect x="374" y="224" width="28" height="66"/></g>
-          <rect x="460" y="92" width="166" height="224" rx="6" fill="#fff" stroke="#d9d6cd"/>
-          <text x="474" y="114" font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b">Purchase requisitions</text>
-          <g font-family="Inter, sans-serif" font-size="11" fill="#171717"><text x="474" y="148">Mapped</text><text x="474" y="212">Unmapped</text></g>
-          <g><rect x="474" y="156" width="130" height="18" rx="3" fill="#4361EE"/><rect x="474" y="220" width="64" height="18" rx="3" fill="#F3D6DA"/></g>
-        </svg>
-
-        <!-- Software assets -->
-        <svg class="panel" id="panel-sam" role="tabpanel" aria-labelledby="tab-sam" viewBox="0 0 640 330" aria-label="Illustrative layout of the software asset report" hidden>
-          <rect width="640" height="330" fill="#FBFAF7"/>
-          <rect x="14" y="14" width="118" height="302" rx="6" fill="#F0EEE8"/>
-          <g font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b"><text x="26" y="38">Product</text><text x="26" y="92">Department</text><text x="26" y="146">Location</text></g>
-          <g fill="#fff" stroke="#d9d6cd"><rect x="26" y="46" width="94" height="22" rx="4"/><rect x="26" y="100" width="94" height="22" rx="4"/><rect x="26" y="154" width="94" height="22" rx="4"/></g>
-          <g fill="#fff" stroke="#d9d6cd"><rect x="148" y="14" width="148" height="64" rx="6"/><rect x="304" y="14" width="148" height="64" rx="6"/><rect x="460" y="14" width="166" height="64" rx="6"/></g>
-          <g font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b"><text x="162" y="38">Licences</text><text x="318" y="38">Allocated</text><text x="474" y="38">Available</text></g>
-          <g><rect x="162" y="50" width="72" height="12" rx="3" fill="#4361EE"/><rect x="318" y="50" width="72" height="12" rx="3" fill="#B9A7F5"/><rect x="474" y="50" width="72" height="12" rx="3" fill="#F3D6DA"/></g>
-          <rect x="148" y="92" width="300" height="224" rx="6" fill="#fff" stroke="#d9d6cd"/>
-          <text x="162" y="114" font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b">Licence utilisation</text>
-          <circle cx="298" cy="212" r="62" fill="none" stroke="#B9A7F5" stroke-width="24"/>
-          <circle cx="298" cy="212" r="62" fill="none" stroke="#4361EE" stroke-width="24" stroke-dasharray="250 390" transform="rotate(-90 298 212)"/>
-          <rect x="460" y="92" width="166" height="224" rx="6" fill="#fff" stroke="#d9d6cd"/>
-          <text x="474" y="114" font-family="Inter, sans-serif" font-size="11" fill="#5b5b5b">By product</text>
-          <g font-family="Inter, sans-serif" font-size="11" fill="#171717"><text x="474" y="144">Microsoft 365</text><text x="474" y="186">Adobe</text><text x="474" y="228">Bentley</text><text x="474" y="270">Primavera</text></g>
-          <g fill="#4361EE"><rect x="474" y="150" width="120" height="10" rx="3"/><rect x="474" y="192" width="84" height="10" rx="3"/><rect x="474" y="234" width="104" height="10" rx="3"/><rect x="474" y="276" width="60" height="10" rx="3"/></g>
-        </svg>
-        <p class="frame__note">Illustrative layout of the report pages I built. Not actual company data.</p>
-      </div>
-
-      <div class="case__meta">
-        <dl class="meta">
-          <div><dt>Organization</dt><dd>Adani Green PVC / Mundra Petrochem Limited</dd></div>
-          <div><dt>Role</dt><dd>Data &amp; Analytics Intern</dd></div>
-          <div><dt>Worked with</dt><dd>Power BI, Power Query, DAX, Excel, SQL Server, Power Automate, Power Apps, Dataverse, SharePoint</dd></div>
-        </dl>
-        <p class="case__overview">Mundra Petrochem is building India's first coal-based PVC manufacturing facility. I worked on the digital side of that effort: reporting, workflow automation and an application foundation, all aimed at giving teams clearer visibility and less manual work.</p>
-      </div>
-    </div>
-
-    <div class="case__media">
-      <figure class="media--real"><img src="assets/kanishka-adani.webp" alt="Kanishka at the Adani Orientation Month photo frame, 2026" width="600" height="800" loading="lazy"><figcaption><b>Where it began.</b> Adani Orientation Month, 2026.</figcaption></figure>
-      <figure><img src="assets/story-meeting.webp" alt="A presenter walking a team through charts on a wall screen" width="390" height="528" loading="lazy"><figcaption><b>Dashboards are for meetings.</b> The goal was a report a whole team could read at a glance.</figcaption></figure>
-      <figure><img src="assets/data-desk.webp" alt="A laptop with holographic charts above a desk of notes and sketches" width="408" height="555" loading="lazy"><figcaption><b>Sketch first, then build.</b> Layout and measures were planned on paper before any Power BI work.</figcaption></figure>
-      <p class="case__note">The meeting and desk images are illustrative, not photos of the company or its data.</p>
-    </div>
-
-    <ul class="highlights">
-      <li>
-        <p class="kicker">Power BI</p>
-        <h3>Environment &amp; Sustainability</h3>
-        <p>Developed Power BI reporting views for environmental monitoring, including water consumption, power consumption, noise levels, and sustainability indicators.</p>
-        <p class="stack">Power Query, data modeling, KPI cards, filters, slicers, time-based and location-based analysis</p>
-      </li>
-      <li>
-        <p class="kicker">Power BI</p>
-        <h3>IT Budget Management</h3>
-        <p>Created interactive reporting to support budget allocation, expenditure monitoring, purchase requisition tracking, financial-year comparisons, and budget visibility.</p>
-        <p class="stack">Power BI, Excel, Power Query, DAX, structured data models</p>
-      </li>
-      <li>
-        <p class="kicker">Power BI</p>
-        <h3>Software Asset Management</h3>
-        <p>Developed reporting views for software inventory, license allocation, utilization, subscription status, compliance monitoring, and enterprise software visibility.</p>
-        <p class="stack">Inventory, licensing and subscription data brought into one reporting model</p>
-      </li>
+    <ul class="cards cards--3">
+      <li class="card"><h3>Environment &amp; Sustainability</h3><p>Power BI views for water use, power use and noise levels.</p></li>
+      <li class="card"><h3>IT Budget Management</h3><p>Reporting for budget allocation, spend and purchase requisitions.</p></li>
+      <li class="card"><h3>Software Asset Management</h3><p>One model for licences, utilisation and subscription status.</p></li>
     </ul>
+  </div>
+</section>
 
-    <div class="build">
-      <h3 class="build__title">Beyond dashboards: automation and application development</h3>
-      <div class="build__grid">
-        <div>
-          <p class="kicker">Power Automate</p>
-          <p>Built Power Automate workflows integrating SharePoint and Outlook for notifications, reminders, file monitoring, storage utilization alerts, and reporting processes.</p>
-          <ol class="flow" aria-label="Example flow: storage utilization alert">
-            <li>SharePoint folder</li>
-            <li>Check utilization</li>
-            <li>Outlook alert</li>
-          </ol>
-        </div>
-        <div>
-          <p class="kicker">Power Apps &amp; Dataverse</p>
-          <p>Explored Power Apps and Dataverse while developing the foundation of a PMS Companion application with structured data models and relational tables.</p>
-        </div>
+<!-- VYBE LEARN -->
+<section class="section" id="vybe">
+  <div class="wrap">
+    <header class="head"><span class="num">02</span><h2>Vybe Learn</h2></header>
+    <div class="split split--flip">
+      <div class="panel">
+        <h3>Personalized Data Science Tutor</h3>
+        <p class="sub">Sep 2026 – Present</p>
+        <p>An AI-powered learning platform with a multi-agent tutor and an adaptive curriculum. Started as a hackathon project; my team and I are growing it on AWS and gathering user feedback.</p>
+        <ul class="chips">
+          <li>Multi-agent tutor</li><li>Adaptive curriculum</li><li>LLM integration</li><li>AWS</li>
+        </ul>
+        <a class="btn btn--primary" href="https://vybelearn.vercel.app/" target="_blank" rel="noopener">Open Vybe Learn</a>
       </div>
+      <a class="shot" href="https://vybelearn.vercel.app/" target="_blank" rel="noopener" aria-label="Open Vybe Learn in a new tab">
+        <span class="shot__bar"><i></i><i></i><i></i>vybelearn.vercel.app</span>
+        <img src="assets/vybe-learn-preview.webp" alt="Vybe Learn home page: Let's vybe, who says data science has to be boring" width="1520" height="730" loading="lazy">
+      </a>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="section projects" id="projects">
-  <svg class="mandala mandala--bg mandala--ink" viewBox="-100 -100 200 200" aria-hidden="true" focusable="false"><use href="#mandala"/></svg>
+<section class="section" id="projects">
   <div class="wrap">
-    <h2>A few things I've <em>been building.</em></h2>
-
-    <div class="pgrid">
-      <!-- Featured -->
-      <article class="project project--feature">
-        <a class="project__shot" href="https://vybelearn.vercel.app/" target="_blank" rel="noopener" aria-label="Open Vybe Learn in a new tab">
-          <span class="shot__bar" aria-hidden="true"><i></i><i></i><i></i><span>vybelearn.vercel.app</span></span>
-          <img src="assets/vybe-learn-preview.webp" width="1520" height="730" alt="Home page of Vybe Learn showing the headline 'Let's vybe' and a friendly robot mascot on a dark background" fetchpriority="low">
-        </a>
-        <div class="project__body">
-          <p class="project__cat">AI / EdTech / Intelligent Learning Systems</p>
-          <h3>Vybe Learn — Personalized Data Science Tutor</h3>
-          <p class="project__time">September 2026 – Present</p>
-          <p>Built the MVP of an AI-powered learning platform featuring a multi-agent tutor and adaptive curriculum. Currently gathering user feedback to guide improvements and wider distribution.</p>
-          <p class="origin"><strong>How it started.</strong> Vybe Learn began as a hackathon project. My team and I decided to take it further: growing it on AWS and learning everything that goes into building a proper product.</p>
-          <figure class="ai-flow">
-            <svg viewBox="0 0 600 92" role="img" aria-label="Diagram: the learner works with a multi-agent tutor, which shapes an adaptive curriculum that adapts back to the learner">
-              <defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#171717"/></marker></defs>
-              <g font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" text-anchor="middle">
-                <rect x="1" y="12" width="112" height="40" rx="3" fill="#F8F7F4" stroke="#171717" stroke-width="1.5"/>
-                <text x="57" y="37" fill="#171717">Learner</text>
-                <rect x="204" y="12" width="168" height="40" rx="3" fill="#4361EE"/>
-                <text x="288" y="37" fill="#fff">Multi-agent tutor</text>
-                <rect x="440" y="12" width="159" height="40" rx="3" fill="#B9A7F5" stroke="#171717" stroke-width="1.5"/>
-                <text x="519" y="37" fill="#171717">Adaptive curriculum</text>
-              </g>
-              <g stroke="#171717" stroke-width="1.5" fill="none">
-                <line x1="115" y1="32" x2="200" y2="32" marker-end="url(#arr)"/>
-                <line x1="374" y1="32" x2="436" y2="32" marker-end="url(#arr)"/>
-                <path d="M519 54 V76 H57 V56" marker-end="url(#arr)" stroke-dasharray="5 4"/>
-              </g>
-              <text x="288" y="70" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" fill="#575757" style="paint-order:stroke" stroke="#fff" stroke-width="6">adapts to the learner</text>
-            </svg>
-          </figure>
-          <ul class="tags"><li>Multi-agent tutor</li><li>Adaptive curriculum</li><li>LLM integration</li><li>Prompt engineering</li><li>AWS</li></ul>
-          <a class="btn btn--primary" href="https://vybelearn.vercel.app/" target="_blank" rel="noopener">Explore Vybe Learn</a>
-        </div>
-      </article>
-
-      <!-- Crowd -->
-      <article class="project project--crowd">
-        <figure class="viz viz--dark">
-          <svg id="crowd" viewBox="0 0 288 206" role="img" aria-label="Heatmap of simulated crowd density in a canteen, with two counters on the left, an entry at the bottom and an exit on the right"></svg>
-          <figcaption>
-            <span>Simulated in your browser: 160 agents moving between entry, counters and exit.</span>
-            <button type="button" class="linkbtn" id="rerun">Run again</button>
-          </figcaption>
-        </figure>
-        <div class="project__body">
-          <p class="project__cat">Stochastic Modeling / Simulation</p>
-          <h3>Crowd Movement Simulation</h3>
-          <p>Simulated crowd movement in a college canteen using Markov Chains, stochastic modeling, and agent-based simulation.</p>
-          <p>Developed four simulations visualizing crowd density, counter hotspots, exit load, and entry-exit flow imbalances.</p>
-          <ul class="tags"><li>Python</li><li>Markov Chains</li><li>Stochastic Modeling</li><li>Agent-Based Simulation</li></ul>
-        </div>
-      </article>
-
-      <!-- Drowsiness -->
-      <article class="project project--cv">
-        <figure class="viz viz--lav">
-          <svg viewBox="0 0 300 150" role="img" aria-label="Diagram of one eye with six landmark points p1 to p6 used to compute the Eye Aspect Ratio">
-            <path d="M34 78 C78 24 166 24 210 78 C166 128 78 128 34 78 Z" fill="#F8F7F4" stroke="#171717" stroke-width="2"/>
-            <circle cx="122" cy="76" r="20" fill="#4361EE"/><circle cx="122" cy="76" r="8" fill="#171717"/>
-            <g stroke="#171717" stroke-width="1.4" stroke-dasharray="4 4"><line x1="34" y1="78" x2="210" y2="78"/><line x1="84" y1="44" x2="84" y2="112"/><line x1="160" y1="42" x2="160" y2="114"/></g>
-            <g fill="#171717"><circle cx="34" cy="78" r="4"/><circle cx="84" cy="44" r="4"/><circle cx="160" cy="42" r="4"/><circle cx="210" cy="78" r="4"/><circle cx="160" cy="114" r="4"/><circle cx="84" cy="112" r="4"/></g>
-            <g font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600" fill="#171717">
-              <text x="16" y="82">p1</text><text x="78" y="36">p2</text><text x="156" y="34">p3</text><text x="217" y="82">p4</text><text x="156" y="132">p5</text><text x="78" y="130">p6</text>
-            </g>
-          </svg>
-          <svg viewBox="0 0 300 84" role="img" aria-label="Line chart of eye aspect ratio over time dipping below a threshold for a stretch of consecutive frames">
-            <rect x="130" y="6" width="74" height="50" fill="#4361EE" fill-opacity=".22"/>
-            <line x1="8" y1="38" x2="292" y2="38" stroke="#171717" stroke-dasharray="4 4"/>
-            <polyline points="8,16 30,18 46,14 60,32 70,16 92,15 112,18 128,34 140,50 160,52 180,51 200,50 212,30 226,17 250,16 270,18 292,15" fill="none" stroke="#171717" stroke-width="2" stroke-linejoin="round"/>
-            <text x="167" y="74" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="600" fill="#171717">20 consecutive frames below the threshold</text>
-          </svg>
-          <figcaption>EAR = (‖p2−p6‖ + ‖p3−p5‖) / (2‖p1−p4‖). Alert when it stays low.</figcaption>
-        </figure>
-        <div class="project__body">
-          <p class="project__cat">Computer Vision / AI</p>
-          <h3>Driver Drowsiness Detection</h3>
-          <p>Built a real-time driver drowsiness detection system using Python, OpenCV, and Dlib.</p>
-          <p>Used Eye Aspect Ratio (EAR), 68-point facial landmarks, and consecutive-frame monitoring to identify prolonged eye closure and trigger alerts. Generated visual annotations and time-series graphs for alertness analysis.</p>
-          <ul class="tags"><li>Python</li><li>OpenCV</li><li>Dlib</li><li>NumPy</li><li>Matplotlib</li></ul>
-        </div>
-      </article>
-
-      <!-- Superstore -->
-      <article class="project project--stats">
-        <figure class="viz viz--blush">
-          <svg viewBox="0 0 320 170" role="img" aria-label="Histogram of a skewed variable with a fitted probability curve drawn over it">
-            <line x1="20" y1="146" x2="304" y2="146" stroke="#171717" stroke-width="1.6"/>
-            <line x1="20" y1="14" x2="20" y2="146" stroke="#171717" stroke-width="1.6"/>
-            <g fill="#4361EE">
-              <rect x="26" y="40" width="26" height="106"/><rect x="54" y="62" width="26" height="84"/>
-              <rect x="82" y="88" width="26" height="58"/><rect x="110" y="104" width="26" height="42"/>
-              <rect x="138" y="116" width="26" height="30"/><rect x="166" y="126" width="26" height="20"/>
-              <rect x="194" y="133" width="26" height="13"/><rect x="222" y="138" width="26" height="8"/>
-              <rect x="250" y="141" width="26" height="5"/>
-            </g>
-            <path d="M26 30 C70 44 90 84 120 104 C160 128 220 140 280 144" fill="none" stroke="#171717" stroke-width="2.4"/>
-            <g font-family="Space Grotesk, sans-serif" font-size="11" font-weight="600" fill="#171717">
-              <text x="304" y="162" text-anchor="end">Sales</text><text x="28" y="12">Density</text>
-            </g>
-          </svg>
-          <figcaption>Histogram with a fitted distribution, parameters estimated by maximum likelihood.</figcaption>
-        </figure>
-        <div class="project__body">
-          <p class="project__cat">Statistical Computing / Data Analytics</p>
-          <h3>Global Superstore Statistical Analysis</h3>
-          <p>Performed exploratory data analysis and statistical modeling on retail sales, profit, and order data.</p>
-          <p>Applied Normal, Binomial, and Poisson distributions, maximum likelihood estimation, probability functions, normalization, and statistical visualization.</p>
-          <ul class="tags"><li>Python</li><li>Pandas</li><li>NumPy</li><li>SciPy</li><li>Matplotlib</li><li>Seaborn</li></ul>
-        </div>
-      </article>
-    </div>
+    <header class="head"><span class="num">03</span><h2>More projects</h2></header>
+    <ul class="cards cards--3">
+      <li class="card"><h3>Crowd Movement Simulation</h3><p>Agent-based simulation of a college canteen using Markov chains.</p><ul class="chips"><li>Python</li><li>Markov chains</li></ul></li>
+      <li class="card"><h3>Driver Drowsiness Detection</h3><p>Real-time alerts from eye aspect ratio and facial landmarks.</p><ul class="chips"><li>OpenCV</li><li>Dlib</li></ul></li>
+      <li class="card"><h3>Global Superstore Analysis</h3><p>Statistical modeling of retail sales, profit and orders.</p><ul class="chips"><li>Pandas</li><li>SciPy</li></ul></li>
+    </ul>
   </div>
 </section>
 
-<!-- TOOLKIT -->
-<section class="section toolkit" id="toolkit">
-  <div class="wrap toolkit__grid">
-    <div class="toolkit__side">
-      <h2>The tools behind the <em>ideas.</em></h2>
-      <figure class="arch arch--small">
-        <img class="arch__img" src="assets/data-ideas.webp" alt="A person at a desk facing glowing screens, with sparks of data rising above them" width="402" height="555" loading="lazy">
+<!-- DANCE -->
+<section class="section" id="dance">
+  <svg class="mandala mandala--bg" viewBox="-100 -100 200 200" aria-hidden="true" focusable="false"><use href="#mandala"/></svg>
+  <div class="wrap">
+    <header class="head"><span class="num">04</span><h2>Data and dance, one rhythm</h2></header>
+    <div class="split">
+      <div class="panel">
+        <h3>Bharatanatyam, Arangetram completed</h3>
+        <p>Rhythm, precision and storytelling are what I practise on stage and what I bring to data.</p>
+        <figure class="tala" id="tala">
+          <div class="tala__bars" role="img" aria-label="Eight bars, one per beat of Adi tala, lighting up in turn">
+            <span style="--h:100"></span><span style="--h:52"></span><span style="--h:68"></span><span style="--h:52"></span><span style="--h:88"></span><span style="--h:52"></span><span style="--h:68"></span><span style="--h:52"></span>
+          </div>
+          <div class="tala__syl" aria-hidden="true"><b>Tha</b><b>Ka</b><b>Dhi</b><b>Mi</b><b>Tha</b><b>Ka</b><b>Jo</b><b>Nu</b></div>
+        </figure>
+        <dl class="pairs">
+          <div><dt>Tala</dt><dd>Time series</dd></div>
+          <div><dt>Adavu</dt><dd>Algorithms</dd></div>
+          <div><dt>Abhinaya</dt><dd>Storytelling</dd></div>
+        </dl>
+      </div>
+      <figure class="photo arch">
+        <img src="assets/kanishka-stage.webp" alt="Kanishka performing Bharatanatyam on a dark stage, one arm raised" width="363" height="627" loading="lazy">
       </figure>
     </div>
-    <dl class="rows">
-      <div><dt>Programming</dt><dd>Python, SQL, R, C++</dd></div>
-      <div><dt>Data Science &amp; AI</dt><dd>Exploratory Data Analysis, Feature Engineering, Forecasting, Statistical Modeling, Prompt Engineering, LLM Integration</dd></div>
-      <div><dt>Visualization</dt><dd>Power BI, Tableau, Matplotlib, Seaborn</dd></div>
-      <div><dt>Automation</dt><dd>Power Automate, Power Apps, Dataverse, SharePoint</dd></div>
-      <div><dt>Databases</dt><dd>MySQL, PostgreSQL</dd></div>
-      <div><dt>Development Tools</dt><dd>Git, Google Colab, Jupyter Notebook, Excel</dd></div>
-    </dl>
   </div>
 </section>
 
-<!-- EDUCATION -->
-<section class="section education" id="education">
-  <svg class="mandala mandala--bg mandala--ink mandala--left" viewBox="-100 -100 200 200" aria-hidden="true" focusable="false"><use href="#mandala"/></svg>
-  <div class="wrap edu__grid">
-    <h2>Currently learning. <em>Always building.</em></h2>
-    <ol class="timeline">
-      <li>
-        <p class="timeline__when">2024–2029</p>
-        <div>
-          <h3>MBA Tech (Data Science)</h3>
-          <p>SVKM's Narsee Monjee Institute of Management Studies (NMIMS)</p>
-          <p class="timeline__meta">Five-year integrated programme · GPA 8.25/10</p>
-        </div>
-      </li>
-      <li>
-        <p class="timeline__when">2024</p>
-        <div>
-          <h3>Class XII</h3>
-          <p>The New Tulip International School</p>
-          <p class="timeline__meta">CBSE · 89%</p>
-        </div>
-      </li>
-      <li>
-        <p class="timeline__when">2022</p>
-        <div>
-          <h3>Class X</h3>
-          <p>Eklavya School</p>
-          <p class="timeline__meta">CBSE · 92%</p>
-        </div>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- BEYOND -->
-<section class="section beyond" id="beyond">
+<!-- ABOUT -->
+<section class="section" id="about">
   <div class="wrap">
-    <h2>Beyond the <em>screen.</em></h2>
-    <div class="beyond__grid">
-      <article class="dancecard">
-        <img src="assets/dance-mandala.webp" alt="" width="374" height="716" loading="lazy">
-        <div class="dancecard__text">
-          <p class="dancecard__kicker">Bharatanatyam</p>
-          <h3>Arangetram, <em>completed.</em></h3>
-          <p>The full-length solo stage debut that marks the end of years of training.</p>
-        </div>
-      </article>
-      <div class="beyond__right">
-      <article class="feature">
-        <p class="feature__big">Top 20</p>
-        <h3>GDG Build and Grow AI Hackathon</h3>
-        <p>Ranked among the Top 20 teams in a 24-hour national-level AI hackathon with 250+ participants.</p>
-      </article>
-      <ul class="roles">
-        <li><div><h3>Sub Head (AGM), IETE-SF</h3><p>Coordinated industry guests and judges across four technical festivals.</p></div><time>July 2025 – July 2026</time></li>
-        <li><div><h3>Sub Head (Outreach), Taqneeq</h3><p>Led outreach initiatives and helped drive 50+ participant registrations.</p></div><time>July 2025 – July 2026</time></li>
-        <li><div><h3>Executive, IETE-SF</h3><p>Managed publicity and outreach, securing 50+ registrations per event.</p></div><time>July 2024 – July 2025</time></li>
-        <li><div><h3>Executive, MunSoc</h3><p>Supported publicity and logistics for two Model UN conferences, helping achieve 100+ total registrations.</p></div><time>July 2024 – July 2025</time></li>
-      </ul>
-      </div>
-    </div>
+    <header class="head"><span class="num">05</span><h2>About</h2></header>
+    <ul class="cards cards--3">
+      <li class="card"><h3>Who</h3><p>MBA Tech (Data Science) student at NMIMS Mumbai, GPA 8.25/10. Top 20 at the GDG Build and Grow AI Hackathon.</p></li>
+      <li class="card"><h3>Skills</h3><p>Python, SQL, R, Power BI, DAX, Tableau, Power Automate, Power Apps, forecasting, statistical modeling, LLM integration.</p></li>
+      <li class="card"><h3>Off screen</h3><p>Bharatanatyam, reading, basketball, surfing and food.</p></li>
+    </ul>
   </div>
 </section>
 
 </main>
 
 <footer class="contact" id="contact">
-  <img class="foot foot--footer" src="assets/dance-ghungroo.png" alt="" width="254" height="361" loading="lazy">
-  <svg class="mandala mandala--bg" viewBox="-100 -100 200 200" aria-hidden="true" focusable="false"><use href="#mandala"/></svg>
   <div class="wrap">
-    <h2>Have something <em>interesting</em> in mind?</h2>
-    <p class="contact__copy">Whether it's data, AI, a project collaboration, or just an interesting conversation — I'd love to connect.</p>
+    <h2>Let's connect</h2>
     <ul class="contact__links">
-      <li><span>Email</span><a href="mailto:kanishkaanand0911@gmail.com">kanishkaanand0911@gmail.com</a></li>
-      <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/kanishka-anand09" target="_blank" rel="noopener">linkedin.com/in/kanishka-anand09</a></li>
-      <li><span>GitHub</span><a href="https://github.com/kanishkaanand0911-dotcom" target="_blank" rel="noopener">github.com/kanishkaanand0911-dotcom</a></li>
+      <li><a href="mailto:kanishkaanand0911@gmail.com">kanishkaanand0911@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/kanishka-anand09" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/kanishkaanand0911-dotcom" target="_blank" rel="noopener">GitHub</a></li>
     </ul>
-    <p class="contact__legal">© 2026 Kanishka Anand. Built with curiosity. <a href="https://github.com/kanishkaanand0911-dotcom/kanishkaanand0911-dotcom.github.io" target="_blank" rel="noopener">Source code</a> · <a href="#top">Back to top</a></p>
+    <p class="contact__legal">© 2026 Kanishka Anand. Built with curiosity. <a href="https://github.com/kanishkaanand0911-dotcom/kanishkaanand0911-dotcom.github.io" target="_blank" rel="noopener">Source code</a></p>
   </div>
 </footer>
 
