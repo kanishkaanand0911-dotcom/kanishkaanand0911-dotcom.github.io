@@ -169,3 +169,75 @@
     if (btn) btn.addEventListener("click", function () { draw(simulate((Date.now() & 0xffff) + 1)); });
   }
 })();
+
+/* ---------- Immersive layer ---------- */
+(function () {
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var root = document.documentElement;
+  root.classList.add("js");
+
+  /* scroll progress + light parallax */
+  var bar = document.getElementById("progress");
+  var par = Array.prototype.slice.call(document.querySelectorAll("[data-speed]"));
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () {
+      var max = root.scrollHeight - innerHeight;
+      if (bar) bar.style.transform = "scaleX(" + (max > 0 ? scrollY / max : 0) + ")";
+      if (!reduce && innerWidth > 640) {
+        par.forEach(function (el) {
+          var r = el.getBoundingClientRect();
+          var d = (r.top + r.height / 2 - innerHeight / 2) * parseFloat(el.getAttribute("data-speed"));
+          el.style.translate = "0 " + d.toFixed(1) + "px";
+        });
+      }
+      ticking = false;
+    });
+  }
+  addEventListener("scroll", onScroll, { passive: true });
+  addEventListener("resize", onScroll);
+  onScroll();
+
+  /* reveal on scroll */
+  var targets = document.querySelectorAll(".section h2, .about__copy, .venn, .project, .highlights li, .build, .case__media figure, .rows div, .timeline li, .roles li, .feature, .dancecard, .pairs div, .tala, .board, .toolkit__side .arch");
+  if ("IntersectionObserver" in window && !reduce) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    targets.forEach(function (t) { t.classList.add("reveal"); io.observe(t); });
+  }
+
+  /* gold spotlight follows the pointer in the hero */
+  var hero = document.querySelector(".hero");
+  if (hero && !reduce) {
+    hero.addEventListener("pointermove", function (e) {
+      var r = hero.getBoundingClientRect();
+      hero.style.setProperty("--mx", (e.clientX - r.left) + "px");
+      hero.style.setProperty("--my", (e.clientY - r.top) + "px");
+    });
+  }
+
+  /* Adi tala: eight beats lighting up in turn */
+  var tala = document.getElementById("tala");
+  if (tala) {
+    var bars = tala.querySelectorAll(".tala__bars span");
+    var syl = tala.querySelectorAll(".tala__syl b");
+    var beat = 0, paused = false;
+    function show(n) {
+      for (var i = 0; i < bars.length; i++) {
+        bars[i].classList.toggle("is-on", i === n);
+        syl[i].classList.toggle("is-on", i === n);
+      }
+    }
+    if (reduce) { show(0); return; }
+    tala.addEventListener("pointerenter", function () { paused = true; });
+    tala.addEventListener("pointerleave", function () { paused = false; });
+    for (var k = 0; k < bars.length; k++) {
+      (function (i) { bars[i].addEventListener("pointerenter", function () { beat = i; show(i); }); })(k);
+    }
+    setInterval(function () { if (paused) return; show(beat); beat = (beat + 1) % bars.length; }, 480);
+  }
+})();
